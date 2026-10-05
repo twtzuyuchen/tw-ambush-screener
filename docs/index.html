@@ -31,8 +31,17 @@ h1{font:900 clamp(34px,6vw,56px)/1.05 var(--serif);margin:0;letter-spacing:.02em
 .warn{margin:18px 0 0;padding:10px 14px;border-left:3px solid var(--fire);background:var(--sheet);
   font-size:13px;color:var(--muted)}
 .warn li{margin:2px 0}
-.controls{display:flex;flex-wrap:wrap;gap:12px 20px;align-items:center;margin:32px 0 10px;
-  padding:12px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.tabs{display:flex;flex-wrap:wrap;gap:0;margin:32px 0 0;border-bottom:2px solid var(--ink)}
+.tabs button{all:unset;cursor:pointer;padding:10px 18px 8px;font:600 16px var(--serif);
+  color:var(--muted);border:1px solid transparent;border-bottom:none;border-radius:6px 6px 0 0;
+  margin-bottom:-2px}
+.tabs button[aria-selected="true"]{color:var(--ink);background:var(--sheet);
+  border-color:var(--ink);border-bottom:2px solid var(--sheet)}
+.tabs button:focus-visible{outline:2px solid var(--up);outline-offset:-4px}
+.tabs small{font:400 12px var(--sans);margin-left:6px}
+.controls{display:flex;flex-wrap:wrap;gap:12px 20px;align-items:center;margin:0 0 10px;
+  padding:12px 0;border-bottom:1px solid var(--line)}
+.catnote{font-size:13px;color:var(--muted);margin:10px 0 0}
 .controls input[type=search]{font:inherit;color:inherit;background:var(--sheet);
   border:1px solid var(--line);border-radius:6px;padding:6px 10px;min-width:220px}
 .controls label{display:flex;gap:6px;align-items:center;color:var(--muted);font-size:14px}
@@ -88,12 +97,11 @@ ol{list-style:none;margin:0;padding:0}
   <p class="lede" id="lede">載入結果中…</p>
   <div id="warn"></div>
 
+  <div class="tabs" role="tablist" id="tabs"></div>
+  <p class="catnote" id="catnote"></p>
   <div class="controls">
     <input type="search" id="q" placeholder="搜尋代號或名稱" aria-label="搜尋代號或名稱">
     <label><input type="checkbox" id="fired"> 只看已點火</label>
-    <label>資料覆蓋 ≥
-      <select id="cov"><option value="0">不限</option><option value="0.7">70%</option><option value="0.85">85%</option></select>
-    </label>
     <div class="legend" aria-hidden="true"><i style="background:var(--up)"></i>四柱依序：籌碼・技術・基本・心理</div>
   </div>
 
@@ -102,7 +110,7 @@ ol{list-style:none;margin:0;padding:0}
 </main>
 <script>
 const $ = s => document.querySelector(s);
-let DATA = null;
+let DATA = null, CAT = "全部";
 const pct = x => x == null ? "—" : Math.round(x * 100) + "%";
 const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 
@@ -116,16 +124,23 @@ function dimScore(it, keys) {
 }
 
 function render() {
-  const q = $("#q").value.trim(), onlyFired = $("#fired").checked, cov = +$("#cov").value;
-  const items = DATA.items.filter(it =>
-    (!q || it.code.includes(q) || it.name.includes(q)) &&
-    (!onlyFired || it.trigger.fired) && it.coverage >= cov);
+  if (!DATA.generated_at) { $("#list").innerHTML = ""; return; }
+  const q = $("#q").value.trim(), onlyFired = $("#fired").checked;
+  const groups = {};
+  DATA.items.forEach(it => (groups[it.group] ??= []).push(it));
+  const names = Object.keys(groups).sort((a, b) => groups[b][0].score - groups[a][0].score);
+  if (CAT !== "全部" && !groups[CAT]) CAT = "全部";
+  $("#tabs").innerHTML = ["全部", ...names].map(c =>
+    `<button role="tab" aria-selected="${c === CAT}" data-cat="${esc(c)}">${esc(c)}<small>${c === "全部" ? DATA.items.length : groups[c].length}</small></button>`).join("");
+  $("#catnote").textContent = `依總分排序，同一產業最多列 ${DATA.max_per_industry} 檔。`;
+  const items = (CAT === "全部" ? DATA.items : groups[CAT]).filter(it =>
+    (!q || it.code.includes(q) || it.name.includes(q)) && (!onlyFired || it.trigger.fired));
   const list = $("#list");
   if (!DATA.items.length) {
     list.innerHTML = `<li class="empty">這次沒有股票同時通過技術面初選與資料覆蓋門檻。可在 config.yaml 放寬 stage1.max_spread 或 technical.base.max_range 後，到 Actions 手動重跑。</li>`;
     return;
   }
-  if (!items.length) { list.innerHTML = `<li class="empty">沒有符合篩選條件的股票，請清除搜尋或放寬覆蓋率。</li>`; return; }
+  if (!items.length) { list.innerHTML = `<li class="empty">沒有符合篩選條件的股票，請清除搜尋或取消「只看已點火」。</li>`; return; }
   const dims = Object.entries(DATA.dimensions);
   list.innerHTML = items.map((it, i) => {
     const strip = dims.map(([name, keys]) => {
@@ -145,7 +160,7 @@ function render() {
       <button class="head" aria-expanded="false" aria-controls="b${it.code}">
         <span class="rank">${i + 1}</span>
         <span><span class="name">${esc(it.name)}<small>${it.code}・${it.market === "twse" ? "上市" : "上櫃"}</small></span>
-          <div class="sub">${flags}${esc(it.industry)}　收盤 ${it.close}（${it.date}）</div></span>
+          <div class="sub">${flags}${esc(it.group)}　收盤 ${it.close}（${it.date}）</div></span>
         <span class="score">${it.score.toFixed(1)}<span>覆蓋 ${pct(it.coverage)}</span></span>
         <span class="strip">${strip}</span>
       </button>
@@ -168,7 +183,12 @@ $("#list").addEventListener("click", e => {
   const row = btn.parentElement, open = row.classList.toggle("open");
   btn.setAttribute("aria-expanded", open);
 });
-["#q", "#fired", "#cov"].forEach(s => $(s).addEventListener("input", render));
+$("#tabs").addEventListener("click", e => {
+  const b = e.target.closest("button[data-cat]"); if (!b) return;
+  CAT = b.dataset.cat; render();
+  [...$("#tabs").children].find(b => b.dataset.cat === CAT)?.focus();
+});
+["#q", "#fired"].forEach(s => $(s).addEventListener("input", render));
 
 fetch("results.json", {cache: "no-store"}).then(r => {
   if (!r.ok) throw new Error(r.status);
@@ -176,7 +196,7 @@ fetch("results.json", {cache: "no-store"}).then(r => {
 }).then(d => {
   DATA = d;
   $("#lede").textContent = d.generated_at
-    ? `${d.generated_at} 掃描。股票池 ${d.universe} 檔，技術面初選 ${d.stage1} 檔，深入分析 ${d.stage2} 檔，列出 ${d.items.length} 檔。點選任一列查看各項條件的實際數據。`
+    ? `${d.generated_at} 掃描。股票池 ${d.universe} 檔，技術面初選 ${d.stage1} 檔，深入分析 ${d.stage2} 檔，列出 ${d.items.length} 檔。上方可依產業切換，點選任一列查看各項條件的實際數據。`
     : "尚未執行過掃描。請到 GitHub 的 Actions 分頁手動執行 screen 工作流程。";
   if (d.warnings?.length) $("#warn").innerHTML =
     `<div class="warn"><strong>本次執行的資料限制</strong><ul>${d.warnings.map(w => `<li>${esc(w)}</li>`).join("")}</ul></div>`;
