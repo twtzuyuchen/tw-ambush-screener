@@ -1,1 +1,5190 @@
-{"generated_at": null, "universe": 0, "stage1": 0, "stage2": 0, "weights": {}, "warnings": [], "dimensions": {}, "labels": {}, "items": []}
+{
+ "generated_at": "2026-10-05 15:37",
+ "universe": 100,
+ "stage1": 42,
+ "stage2": 42,
+ "finmind_calls": 172,
+ "weights": {
+  "base": 12,
+  "volume_dry": 10,
+  "ma_squeeze": 12,
+  "big_holder": 12,
+  "margin": 8,
+  "smart_money": 8,
+  "insider": 6,
+  "turnaround": 8,
+  "yoy_turn": 10,
+  "theme": 4,
+  "media": 5,
+  "valuation": 5
+ },
+ "warnings": [
+  "自行累積的集保快照僅 1 週（FinMind 股權分散表不可用時才會用到）"
+ ],
+ "dimensions": {
+  "籌碼面": [
+   "big_holder",
+   "margin",
+   "smart_money",
+   "insider"
+  ],
+  "技術面": [
+   "base",
+   "volume_dry",
+   "ma_squeeze"
+  ],
+  "基本面": [
+   "turnaround",
+   "yoy_turn",
+   "theme"
+  ],
+  "心理面": [
+   "media",
+   "valuation"
+  ]
+ },
+ "labels": {
+  "base": "長期打底",
+  "volume_dry": "窒息量",
+  "ma_squeeze": "均線糾結",
+  "big_holder": "大戶增持",
+  "margin": "融資退場",
+  "smart_money": "主力承接",
+  "insider": "內部人增持",
+  "turnaround": "業績谷底",
+  "yoy_turn": "YoY轉正",
+  "theme": "題材",
+  "media": "低聲量",
+  "valuation": "低基期"
+ },
+ "items": [
+  {
+   "code": "1457",
+   "name": "宜進",
+   "market": "twse",
+   "industry": "紡織纖維",
+   "score": 76.3,
+   "coverage": 0.82,
+   "close": 14.3,
+   "date": "2026-10-05",
+   "trigger": {
+    "fired": false,
+    "detail": ""
+   },
+   "flags": [
+    "營收轉正"
+   ],
+   "signals": {
+    "base": {
+     "score": 0.9340989031161946,
+     "detail": "約 50 週箱型整理，區間 13.85–15.68（振幅 13%），現價位於箱內 25%；整理前高點比箱頂高 37%，屬跌深後打底",
+     "metrics": {
+      "days": 250.0,
+      "range": 0.1318,
+      "box_high": 15.6755,
+      "box_low": 13.85,
+      "pos": 0.2465,
+      "prior_drop": 0.3721
+     }
+    },
+    "volume_dry": {
+     "score": 0.8015877656510917,
+     "detail": "20日均量為年均量的 57%；近60日出現一年最低量（窒息量）",
+     "metrics": {
+      "ratio": 0.5701,
+      "choke": true,
+      "avg20_lots": 83.6967
+     }
+    },
+    "ma_squeeze": {
+     "score": 0.6383012767609295,
+     "detail": "5/10/20/60日均線差距 0.4%，近20日有 20 日差距 ≤ 4%；未成多頭排列；60日線上揚",
+     "metrics": {
+      "spread": 0.0045,
+      "full_bull": false,
+      "days_tight": 20.0,
+      "ma_long_slope": 0.001
+     }
+    },
+    "margin": {
+     "score": 0.6428785607196402,
+     "detail": "融資餘額 550 張，60日 -24%",
+     "metrics": {
+      "balance": 550.0,
+      "chg60": -0.2414,
+      "near_low": false
+     }
+    },
+    "smart_money": {
+     "score": 0.4685714285714285,
+     "detail": "法人近20日淨買 -240 張（占量 -14.3%，35% 天買超）；60日資金流 CMF +0.24",
+     "metrics": {
+      "cmf": 0.2417,
+      "branch_ratio": null
+     }
+    },
+    "turnaround": {
+     "score": 0.85,
+     "detail": "過去兩年有 73% 月份營收年減；一年前的近12月營收較前一年 -4%",
+     "metrics": {
+      "neg_ratio": 0.7273,
+      "ttm_drop": -0.0401,
+      "loss": false
+     }
+    },
+    "yoy_turn": {
+     "score": 1.0,
+     "detail": "2026/08 營收 YoY +8.2%（前5月平均 -5.3%），MoM -3.0%",
+     "metrics": {
+      "yoy": 0.0819,
+      "prev_avg": -0.0534,
+      "mom": -0.0301,
+      "turned": true
+     }
+    },
+    "valuation": {
+     "score": 0.9937,
+     "detail": "股價位於 3 年區間 6%；PBR 0.64（4 年百分位 7%）；PER 10.6",
+     "metrics": {
+      "price_pos": 0.0598,
+      "pbr": 0.64,
+      "pbr_pct": 0.0658,
+      "per": 10.63
+     }
+    },
+    "theme": {
+     "score": 0.0,
+     "detail": "未列入題材清單",
+     "metrics": {}
+    },
+    "big_holder": {
+     "score": null,
+     "detail": "股權分散資料僅 1 週（需 ≥4 週）",
+     "metrics": {}
+    },
+    "insider": {
+     "score": null,
+     "detail": "董監持股快照不足 2 個月（每月累積）",
+     "metrics": {}
+    },
+    "media": {
+     "score": 1.0,
+     "detail": "近90日新聞約 1 則",
+     "metrics": {
+      "news": 1.0,
+      "ptt": null
+     }
+    }
+   },
+   "links": {
+    "news": "https://news.google.com/search?q=%E5%AE%9C%E9%80%B2%201457&hl=zh-TW",
+    "ptt": "https://www.ptt.cc/bbs/Stock/search?q=%E5%AE%9C%E9%80%B2",
+    "dcard": "https://www.dcard.tw/search?query=%E5%AE%9C%E9%80%B2&forum=stock",
+    "mobile01": "https://www.mobile01.com/googlesearch.php?q=%E5%AE%9C%E9%80%B2",
+    "goodinfo": "https://goodinfo.tw/tw/StockDetail.asp?STOCK_ID=1457"
+   }
+  },
+  {
+   "code": "1321",
+   "name": "大洋",
+   "market": "twse",
+   "industry": "塑膠工業",
+   "score": 73.3,
+   "coverage": 0.82,
+   "close": 32.3,
+   "date": "2026-10-05",
+   "trigger": {
+    "fired": false,
+    "detail": ""
+   },
+   "flags": [
+    "營收轉正"
+   ],
+   "signals": {
+    "base": {
+     "score": 0.8372042623405556,
+     "detail": "約 48 週箱型整理，區間 28.45–36.40（振幅 28%），現價位於箱內 48%",
+     "metrics": {
+      "days": 240.0,
+      "range": 0.2794,
+      "box_high": 36.4,
+      "box_low": 28.45,
+      "pos": 0.4843,
+      "prior_drop": 0.1885
+     }
+    },
+    "volume_dry": {
+     "score": 0.949760765976597,
+     "detail": "20日均量為年均量的 44%；近60日出現一年最低量（窒息量）",
+     "metrics": {
+      "ratio": 0.4431,
+      "choke": true,
+      "avg20_lots": 71.9304
+     }
+    },
+    "ma_squeeze": {
+     "score": 0.7574110480682182,
+     "detail": "5/10/20/60日均線差距 0.7%，近20日有 20 日差距 ≤ 4%；偏多（中期>長期）；60日線上揚",
+     "metrics": {
+      "spread": 0.0067,
+      "full_bull": false,
+      "days_tight": 20.0,
+      "ma_long_slope": 0.0057
+     }
+    },
+    "margin": {
+     "score": 0.552525806156938,
+     "detail": "融資餘額 7,068 張，60日 -3%；處於近120日低點",
+     "metrics": {
+      "balance": 7068.0,
+      "chg60": -0.0315,
+      "near_low": true
+     }
+    },
+    "smart_money": {
+     "score": 0.6699021584639845,
+     "detail": "法人近20日淨買 +24 張（占量 +1.7%，55% 天買超）；60日資金流 CMF +0.19",
+     "metrics": {
+      "cmf": 0.1908,
+      "branch_ratio": null
+     }
+    },
+    "turnaround": {
+     "score": 0.85,
+     "detail": "過去兩年有 68% 月份營收年減；一年前的近12月營收較前一年 -15%",
+     "metrics": {
+      "neg_ratio": 0.6818,
+      "ttm_drop": -0.1512,
+      "loss": false
+     }
+    },
+    "yoy_turn": {
+     "score": 0.85,
+     "detail": "2026/08 營收 YoY +5.6%（前5月平均 +4.7%），MoM -8.8%",
+     "metrics": {
+      "yoy": 0.0559,
+      "prev_avg": 0.0473,
+      "mom": -0.0885,
+      "turned": true
+     }
+    },
+    "valuation": {
+     "score": 0.544381171970961,
+     "detail": "股價位於 3 年區間 26%；PBR 1.18（4 年百分位 26%）；PER 248.8",
+     "metrics": {
+      "price_pos": 0.26,
+      "pbr": 1.18,
+      "pbr_pct": 0.2601,
+      "per": 248.85
+     }
+    },
+    "theme": {
+     "score": 0.0,
+     "detail": "未列入題材清單",
+     "metrics": {}
+    },
+    "big_holder": {
+     "score": null,
+     "detail": "股權分散資料僅 1 週（需 ≥4 週）",
+     "metrics": {}
+    },
+    "insider": {
+     "score": null,
+     "detail": "董監持股快照不足 2 個月（每月累積）",
+     "metrics": {}
+    },
+    "media": {
+     "score": 0.7272727272727273,
+     "detail": "近90日新聞約 9 則",
+     "metrics": {
+      "news": 9.0,
+      "ptt": null
+     }
+    }
+   },
+   "links": {
+    "news": "https://news.google.com/search?q=%E5%A4%A7%E6%B4%8B%201321&hl=zh-TW",
+    "ptt": "https://www.ptt.cc/bbs/Stock/search?q=%E5%A4%A7%E6%B4%8B",
+    "dcard": "https://www.dcard.tw/search?query=%E5%A4%A7%E6%B4%8B&forum=stock",
+    "mobile01": "https://www.mobile01.com/googlesearch.php?q=%E5%A4%A7%E6%B4%8B",
+    "goodinfo": "https://goodinfo.tw/tw/StockDetail.asp?STOCK_ID=1321"
+   }
+  },
+  {
+   "code": "1304",
+   "name": "台聚",
+   "market": "twse",
+   "industry": "塑膠工業",
+   "score": 69.1,
+   "coverage": 0.82,
+   "close": 12.6,
+   "date": "2026-10-05",
+   "trigger": {
+    "fired": false,
+    "detail": ""
+   },
+   "flags": [
+    "營收轉正"
+   ],
+   "signals": {
+    "base": {
+     "score": 0.5065229596008894,
+     "detail": "約 24 週箱型整理，區間 11.05–15.33（振幅 39%），現價位於箱內 36%",
+     "metrics": {
+      "days": 120.0,
+      "range": 0.387,
+      "box_high": 15.3258,
+      "box_low": 11.05,
+      "pos": 0.3625,
+      "prior_drop": 0.286
+     }
+    },
+    "volume_dry": {
+     "score": 1.0,
+     "detail": "20日均量為年均量的 26%；近60日出現一年最低量（窒息量）",
+     "metrics": {
+      "ratio": 0.2554,
+      "choke": true,
+      "avg20_lots": 2319.2485
+     }
+    },
+    "ma_squeeze": {
+     "score": 0.6133948158063893,
+     "detail": "5/10/20/60日均線差距 1.7%，近20日有 20 日差距 ≤ 4%；完全多頭排列；60日線下彎",
+     "metrics": {
+      "spread": 0.0172,
+      "full_bull": true,
+      "days_tight": 20.0,
+      "ma_long_slope": -0.0177
+     }
+    },
+    "margin": {
+     "score": 0.9170908046877039,
+     "detail": "融資餘額 9,575 張，60日 -25%；處於近120日低點",
+     "metrics": {
+      "balance": 9575.0,
+      "chg60": -0.2503,
+      "near_low": true
+     }
+    },
+    "smart_money": {
+     "score": 0.4685714285714287,
+     "detail": "法人近20日淨買 +6,763 張（占量 +14.6%，55% 天買超）；60日資金流 CMF -0.21",
+     "metrics": {
+      "cmf": -0.2059,
+      "branch_ratio": null
+     }
+    },
+    "turnaround": {
+     "score": 1.0,
+     "detail": "過去兩年有 77% 月份營收年減；一年前的近12月營收較前一年 -8%；目前本益比為負/不適用（虧損中）",
+     "metrics": {
+      "neg_ratio": 0.7727,
+      "ttm_drop": -0.0819,
+      "loss": true
+     }
+    },
+    "yoy_turn": {
+     "score": 1.0,
+     "detail": "2026/08 營收 YoY +8.7%（前5月平均 -3.7%），MoM +9.9%",
+     "metrics": {
+      "yoy": 0.0872,
+      "prev_avg": -0.0375,
+      "mom": 0.0989,
+      "turned": true
+     }
+    },
+    "valuation": {
+     "score": 0.5026722269240443,
+     "detail": "股價位於 3 年區間 36%；PBR 0.77（4 年百分位 44%）；PER 不適用（虧損）",
+     "metrics": {
+      "price_pos": 0.3579,
+      "pbr": 0.77,
+      "pbr_pct": 0.442,
+      "per": 0.0
+     }
+    },
+    "theme": {
+     "score": 0.0,
+     "detail": "未列入題材清單",
+     "metrics": {}
+    },
+    "big_holder": {
+     "score": null,
+     "detail": "股權分散資料僅 1 週（需 ≥4 週）",
+     "metrics": {}
+    },
+    "insider": {
+     "score": null,
+     "detail": "董監持股快照不足 2 個月（每月累積）",
+     "metrics": {}
+    },
+    "media": {
+     "score": 0.3181818181818182,
+     "detail": "近90日新聞約 18 則",
+     "metrics": {
+      "news": 18.0,
+      "ptt": null
+     }
+    }
+   },
+   "links": {
+    "news": "https://news.google.com/search?q=%E5%8F%B0%E8%81%9A%201304&hl=zh-TW",
+    "ptt": "https://www.ptt.cc/bbs/Stock/search?q=%E5%8F%B0%E8%81%9A",
+    "dcard": "https://www.dcard.tw/search?query=%E5%8F%B0%E8%81%9A&forum=stock",
+    "mobile01": "https://www.mobile01.com/googlesearch.php?q=%E5%8F%B0%E8%81%9A",
+    "goodinfo": "https://goodinfo.tw/tw/StockDetail.asp?STOCK_ID=1304"
+   }
+  },
+  {
+   "code": "1236",
+   "name": "宏亞",
+   "market": "twse",
+   "industry": "食品工業",
+   "score": 67.9,
+   "coverage": 0.82,
+   "close": 25.5,
+   "date": "2026-10-05",
+   "trigger": {
+    "fired": false,
+    "detail": ""
+   },
+   "flags": [],
+   "signals": {
+    "base": {
+     "score": 0.8972163178530259,
+     "detail": "約 50 週箱型整理，區間 21.89–26.38（振幅 21%），現價位於箱內 80%",
+     "metrics": {
+      "days": 250.0,
+      "range": 0.2056,
+      "box_high": 26.3839,
+      "box_low": 21.8851,
+      "pos": 0.8035,
+      "prior_drop": -0.1328
+     }
+    },
+    "volume_dry": {
+     "score": 0.891631914115991,
+     "detail": "20日均量為年均量的 49%；近60日出現一年最低量（窒息量）",
+     "metrics": {
+      "ratio": 0.4929,
+      "choke": true,
+      "avg20_lots": 42.9156
+     }
+    },
+    "ma_squeeze": {
+     "score": 0.4896241795782946,
+     "detail": "5/10/20/60日均線差距 2.6%，近20日有 9 日差距 ≤ 4%；偏多（中期>長期）；60日線上揚",
+     "metrics": {
+      "spread": 0.0262,
+      "full_bull": false,
+      "days_tight": 9.0,
+      "ma_long_slope": 0.0083
+     }
+    },
+    "margin": {
+     "score": 1.0,
+     "detail": "融資餘額 123 張，60日 -35%；處於近120日低點",
+     "metrics": {
+      "balance": 123.0,
+      "chg60": -0.3526,
+      "near_low": true
+     }
+    },
+    "smart_money": {
+     "score": 0.47428571428571437,
+     "detail": "法人近20日淨買 -46 張（占量 -5.4%，40% 天買超）；60日資金流 CMF +0.20",
+     "metrics": {
+      "cmf": 0.2035,
+      "branch_ratio": null
+     }
+    },
+    "turnaround": {
+     "score": 0.9806818181818183,
+     "detail": "過去兩年有 59% 月份營收年減；一年前的近12月營收較前一年 -4%；目前本益比為負/不適用（虧損中）",
+     "metrics": {
+      "neg_ratio": 0.5909,
+      "ttm_drop": -0.0407,
+      "loss": true
+     }
+    },
+    "yoy_turn": {
+     "score": 0.4,
+     "detail": "2026/08 營收 YoY +1.6%（前5月平均 +1.7%），MoM -1.1%",
+     "metrics": {
+      "yoy": 0.0159,
+      "prev_avg": 0.0169,
+      "mom": -0.0114,
+      "turned": false
+     }
+    },
+    "valuation": {
+     "score": 0.29487582781456945,
+     "detail": "股價位於 3 年區間 89%；PBR 0.85（4 年百分位 38%）；PER 不適用（虧損）",
+     "metrics": {
+      "price_pos": 0.8885,
+      "pbr": 0.85,
+      "pbr_pct": 0.3841,
+      "per": 0.0
+     }
+    },
+    "theme": {
+     "score": 0.0,
+     "detail": "未列入題材清單",
+     "metrics": {}
+    },
+    "big_holder": {
+     "score": null,
+     "detail": "股權分散資料僅 1 週（需 ≥4 週）",
+     "metrics": {}
+    },
+    "insider": {
+     "score": null,
+     "detail": "董監持股快照不足 2 個月（每月累積）",
+     "metrics": {}
+    },
+    "media": {
+     "score": 1.0,
+     "detail": "近90日新聞約 3 則",
+     "metrics": {
+      "news": 3.0,
+      "ptt": null
+     }
+    }
+   },
+   "links": {
+    "news": "https://news.google.com/search?q=%E5%AE%8F%E4%BA%9E%201236&hl=zh-TW",
+    "ptt": "https://www.ptt.cc/bbs/Stock/search?q=%E5%AE%8F%E4%BA%9E",
+    "dcard": "https://www.dcard.tw/search?query=%E5%AE%8F%E4%BA%9E&forum=stock",
+    "mobile01": "https://www.mobile01.com/googlesearch.php?q=%E5%AE%8F%E4%BA%9E",
+    "goodinfo": "https://goodinfo.tw/tw/StockDetail.asp?STOCK_ID=1236"
+   }
+  },
+  {
+   "code": "1234",
+   "name": "黑松",
+   "market": "twse",
+   "industry": "食品工業",
+   "score": 67.1,
+   "coverage": 0.74,
+   "close": 32.4,
+   "date": "2026-10-05",
+   "trigger": {
+    "fired": false,
+    "detail": ""
+   },
+   "flags": [
+    "營收轉正"
+   ],
+   "signals": {
+    "base": {
+     "score": 0.755504343204012,
+     "detail": "約 34 週箱型整理，區間 31.82–35.63（振幅 12%），現價位於箱內 15%",
+     "metrics": {
+      "days": 170.0,
+      "range": 0.1198,
+      "box_high": 35.6343,
+      "box_low": 31.8232,
+      "pos": 0.1514,
+      "prior_drop": 0.1259
+     }
+    },
+    "volume_dry": {
+     "score": 0.6161633056016904,
+     "detail": "20日均量為年均量的 73%；近60日出現一年最低量（窒息量）",
+     "metrics": {
+      "ratio": 0.729,
+      "choke": true,
+      "avg20_lots": 94.2879
+     }
+    },
+    "ma_squeeze": {
+     "score": 0.2791029510214081,
+     "detail": "5/10/20/60日均線差距 2.0%，近20日有 20 日差距 ≤ 4%；未成多頭排列；60日線下彎",
+     "metrics": {
+      "spread": 0.0197,
+      "full_bull": false,
+      "days_tight": 20.0,
+      "ma_long_slope": -0.0017
+     }
+    },
+    "margin": {
+     "score": null,
+     "detail": "融資餘額過小，不具參考性",
+     "metrics": {}
+    },
+    "smart_money": {
+     "score": 0.7648209008514453,
+     "detail": "法人近20日淨買 +146 張（占量 +7.7%，55% 天買超）；60日資金流 CMF +0.10",
+     "metrics": {
+      "cmf": 0.1037,
+      "branch_ratio": null
+     }
+    },
+    "turnaround": {
+     "score": 0.85,
+     "detail": "過去兩年有 77% 月份營收年減；一年前的近12月營收較前一年 -10%",
+     "metrics": {
+      "neg_ratio": 0.7727,
+      "ttm_drop": -0.095,
+      "loss": false
+     }
+    },
+    "yoy_turn": {
+     "score": 1.0,
+     "detail": "2026/08 營收 YoY +0.6%（前5月平均 -4.1%），MoM +3.1%",
+     "metrics": {
+      "yoy": 0.0063,
+      "prev_avg": -0.0407,
+      "mom": 0.0307,
+      "turned": true
+     }
+    },
+    "valuation": {
+     "score": 0.9009,
+     "detail": "股價位於 3 年區間 7%；PBR 0.71（4 年百分位 0%）；PER 19.9",
+     "metrics": {
+      "price_pos": 0.0695,
+      "pbr": 0.71,
+      "pbr_pct": 0.0008,
+      "per": 19.91
+     }
+    },
+    "theme": {
+     "score": 0.0,
+     "detail": "未列入題材清單",
+     "metrics": {}
+    },
+    "big_holder": {
+     "score": null,
+     "detail": "股權分散資料僅 1 週（需 ≥4 週）",
+     "metrics": {}
+    },
+    "insider": {
+     "score": null,
+     "detail": "董監持股快照不足 2 個月（每月累積）",
+     "metrics": {}
+    },
+    "media": {
+     "score": 0.7272727272727273,
+     "detail": "近90日新聞約 9 則",
+     "metrics": {
+      "news": 9.0,
+      "ptt": null
+     }
+    }
+   },
+   "links": {
+    "news": "https://news.google.com/search?q=%E9%BB%91%E6%9D%BE%201234&hl=zh-TW",
+    "ptt": "https://www.ptt.cc/bbs/Stock/search?q=%E9%BB%91%E6%9D%BE",
+    "dcard": "https://www.dcard.tw/search?query=%E9%BB%91%E6%9D%BE&forum=stock",
+    "mobile01": "https://www.mobile01.com/googlesearch.php?q=%E9%BB%91%E6%9D%BE",
+    "goodinfo": "https://goodinfo.tw/tw/StockDetail.asp?STOCK_ID=1234"
+   }
+  },
+  {
+   "code": "1323",
+   "name": "永裕",
+   "market": "twse",
+   "industry": "塑膠工業",
+   "score": 66.2,
+   "coverage": 0.82,
+   "close": 21.55,
+   "date": "2026-10-05",
+   "trigger": {
+    "fired": false,
+    "detail": ""
+   },
+   "flags": [],
+   "signals": {
+    "base": {
+     "score": 0.5975686927195857,
+     "detail": "約 30 週箱型整理，區間 17.56–23.59（振幅 34%），現價位於箱內 66%",
+     "metrics": {
+      "days": 150.0,
+      "range": 0.3433,
+      "box_high": 23.591,
+      "box_low": 17.5617,
+      "pos": 0.6615,
+      "prior_drop": 0.1906
+     }
+    },
+    "volume_dry": {
+     "score": 0.963902890877907,
+     "detail": "20日均量為年均量的 43%；近60日出現一年最低量（窒息量）",
+     "metrics": {
+      "ratio": 0.4309,
+      "choke": true,
+      "avg20_lots": 44.3573
+     }
+    },
+    "ma_squeeze": {
+     "score": 0.5453305588711662,
+     "detail": "5/10/20/60日均線差距 2.2%，近20日有 16 日差距 ≤ 4%；偏多（中期>長期）；60日線上揚",
+     "metrics": {
+      "spread": 0.0222,
+      "full_bull": false,
+      "days_tight": 16.0,
+      "ma_long_slope": 0.011
+     }
+    },
+    "margin": {
+     "score": 0.6293200309957382,
+     "detail": "融資餘額 71 張，60日 -20%",
+     "metrics": {
+      "balance": 71.0,
+      "chg60": -0.2022,
+      "near_low": false
+     }
+    },
+    "smart_money": {
+     "score": 0.8742857142857144,
+     "detail": "法人近20日淨買 +47 張（占量 +5.2%，45% 天買超）；60日資金流 CMF +0.20",
+     "metrics": {
+      "cmf": 0.1963,
+      "branch_ratio": null
+     }
+    },
+    "turnaround": {
+     "score": 0.85,
+     "detail": "過去兩年有 73% 月份營收年減；一年前的近12月營收較前一年 -32%",
+     "metrics": {
+      "neg_ratio": 0.7273,
+      "ttm_drop": -0.3162,
+      "loss": false
+     }
+    },
+    "yoy_turn": {
+     "score": 0.5,
+     "detail": "2026/08 營收 YoY +34.1%（前5月平均 +10.2%），MoM +12.9%",
+     "metrics": {
+      "yoy": 0.3408,
+      "prev_avg": 0.1022,
+      "mom": 0.1287,
+      "turned": false
+     }
+    },
+    "valuation": {
+     "score": 0.606385687626865,
+     "detail": "股價位於 3 年區間 43%；PBR 0.73（4 年百分位 21%）；PER 16.7",
+     "metrics": {
+      "price_pos": 0.4293,
+      "pbr": 0.73,
+      "pbr_pct": 0.2123,
+      "per": 16.73
+     }
+    },
+    "theme": {
+     "score": 0.0,
+     "detail": "未列入題材清單",
+     "metrics": {}
+    },
+    "big_holder": {
+     "score": null,
+     "detail": "股權分散資料僅 1 週（需 ≥4 週）",
+     "metrics": {}
+    },
+    "insider": {
+     "score": null,
+     "detail": "董監持股快照不足 2 個月（每月累積）",
+     "metrics": {}
+    },
+    "media": {
+     "score": 0.8181818181818182,
+     "detail": "近90日新聞約 7 則",
+     "metrics": {
+      "news": 7.0,
+      "ptt": null
+     }
+    }
+   },
+   "links": {
+    "news": "https://news.google.com/search?q=%E6%B0%B8%E8%A3%95%201323&hl=zh-TW",
+    "ptt": "https://www.ptt.cc/bbs/Stock/search?q=%E6%B0%B8%E8%A3%95",
+    "dcard": "https://www.dcard.tw/search?query=%E6%B0%B8%E8%A3%95&forum=stock",
+    "mobile01": "https://www.mobile01.com/googlesearch.php?q=%E6%B0%B8%E8%A3%95",
+    "goodinfo": "https://goodinfo.tw/tw/StockDetail.asp?STOCK_ID=1323"
+   }
+  },
+  {
+   "code": "1339",
+   "name": "昭輝",
+   "market": "twse",
+   "industry": "汽車工業",
+   "score": 65.0,
+   "coverage": 0.82,
+   "close": 42.7,
+   "date": "2026-10-05",
+   "trigger": {
+    "fired": false,
+    "detail": ""
+   },
+   "flags": [
+    "營收轉正"
+   ],
+   "signals": {
+    "base": {
+     "score": 0.9143577190783143,
+     "detail": "約 50 週箱型整理，區間 37.56–43.99（振幅 17%），現價位於箱內 80%；整理前高點比箱頂高 58%，屬跌深後打底",
+     "metrics": {
+      "days": 250.0,
+      "range": 0.1713,
+      "box_high": 43.9892,
+      "box_low": 37.5564,
+      "pos": 0.7996,
+      "prior_drop": 0.5776
+     }
+    },
+    "volume_dry": {
+     "score": 0.41685165557412596,
+     "detail": "20日均量為年均量的 64%",
+     "metrics": {
+      "ratio": 0.6427,
+      "choke": false,
+      "avg20_lots": 64.3293
+     }
+    },
+    "ma_squeeze": {
+     "score": 0.7542008090999562,
+     "detail": "5/10/20/60日均線差距 0.7%，近20日有 20 日差距 ≤ 4%；偏多（中期>長期）；60日線上揚",
+     "metrics": {
+      "spread": 0.007,
+      "full_bull": false,
+      "days_tight": 20.0,
+      "ma_long_slope": 0.0027
+     }
+    },
+    "margin": {
+     "score": 0.05222929936305731,
+     "detail": "融資餘額 941 張，60日 +9%",
+     "metrics": {
+      "balance": 941.0,
+      "chg60": 0.0904,
+      "near_low": false
+     }
+    },
+    "smart_money": {
+     "score": 0.4228571428571429,
+     "detail": "法人近20日淨買 +70 張（占量 +5.4%，35% 天買超）；60日資金流 CMF -0.01",
+     "metrics": {
+      "cmf": -0.0056,
+      "branch_ratio": null
+     }
+    },
+    "turnaround": {
+     "score": 0.85,
+     "detail": "過去兩年有 82% 月份營收年減；一年前的近12月營收較前一年 -8%",
+     "metrics": {
+      "neg_ratio": 0.8182,
+      "ttm_drop": -0.0767,
+      "loss": false
+     }
+    },
+    "yoy_turn": {
+     "score": 1.0,
+     "detail": "2026/08 營收 YoY +15.6%（前5月平均 -4.1%），MoM -0.9%",
+     "metrics": {
+      "yoy": 0.1555,
+      "prev_avg": -0.0405,
+      "mom": -0.0088,
+      "turned": true
+     }
+    },
+    "valuation": {
+     "score": 0.8908649767349848,
+     "detail": "股價位於 3 年區間 19%；PBR 0.76（4 年百分位 16%）；PER 7.3",
+     "metrics": {
+      "price_pos": 0.1929,
+      "pbr": 0.76,
+      "pbr_pct": 0.1621,
+      "per": 7.31
+     }
+    },
+    "theme": {
+     "score": 0.0,
+     "detail": "未列入題材清單",
+     "metrics": {}
+    },
+    "big_holder": {
+     "score": null,
+     "detail": "股權分散資料僅 1 週（需 ≥4 週）",
+     "metrics": {}
+    },
+    "insider": {
+     "score": null,
+     "detail": "董監持股快照不足 2 個月（每月累積）",
+     "metrics": {}
+    },
+    "media": {
+     "score": 0.8181818181818182,
+     "detail": "近90日新聞約 7 則",
+     "metrics": {
+      "news": 7.0,
+      "ptt": null
+     }
+    }
+   },
+   "links": {
+    "news": "https://news.google.com/search?q=%E6%98%AD%E8%BC%9D%201339&hl=zh-TW",
+    "ptt": "https://www.ptt.cc/bbs/Stock/search?q=%E6%98%AD%E8%BC%9D",
+    "dcard": "https://www.dcard.tw/search?query=%E6%98%AD%E8%BC%9D&forum=stock",
+    "mobile01": "https://www.mobile01.com/googlesearch.php?q=%E6%98%AD%E8%BC%9D",
+    "goodinfo": "https://goodinfo.tw/tw/StockDetail.asp?STOCK_ID=1339"
+   }
+  },
+  {
+   "code": "1463",
+   "name": "強盛新",
+   "market": "twse",
+   "industry": "紡織纖維",
+   "score": 63.5,
+   "coverage": 0.82,
+   "close": 17.5,
+   "date": "2026-10-05",
+   "trigger": {
+    "fired": false,
+    "detail": ""
+   },
+   "flags": [],
+   "signals": {
+    "base": {
+     "score": 0.9159292523351235,
+     "detail": "約 50 週箱型整理，區間 16.95–19.80（振幅 17%），現價位於箱內 19%；整理前高點比箱頂高 42%，屬跌深後打底",
+     "metrics": {
+      "days": 250.0,
+      "range": 0.1681,
+      "box_high": 19.8,
+      "box_low": 16.95,
+      "pos": 0.193,
+      "prior_drop": 0.4191
+     }
+    },
+    "volume_dry": {
+     "score": 0.7461927967175748,
+     "detail": "20日均量為年均量的 62%；近60日出現一年最低量（窒息量）",
+     "metrics": {
+      "ratio": 0.6175,
+      "choke": true,
+      "avg20_lots": 71.108
+     }
+    },
+    "ma_squeeze": {
+     "score": 0.415773784546623,
+     "detail": "5/10/20/60日均線差距 1.0%，近20日有 20 日差距 ≤ 4%；未成多頭排列；60日線下彎",
+     "metrics": {
+      "spread": 0.0098,
+      "full_bull": false,
+      "days_tight": 20.0,
+      "ma_long_slope": -0.0009
+     }
+    },
+    "margin": {
+     "score": 0.2670883985703267,
+     "detail": "融資餘額 450 張，60日 -11%",
+     "metrics": {
+      "balance": 450.0,
+      "chg60": -0.1054,
+      "near_low": false
+     }
+    },
+    "smart_money": {
+     "score": 0.9314285714285714,
+     "detail": "法人近20日淨買 +502 張（占量 +35.3%，70% 天買超）；60日資金流 CMF +0.42",
+     "metrics": {
+      "cmf": 0.4244,
+      "branch_ratio": null
+     }
+    },
+    "turnaround": {
+     "score": 1.0,
+     "detail": "過去兩年有 64% 月份營收年減；一年前的近12月營收較前一年 +262%；目前本益比為負/不適用（虧損中）",
+     "metrics": {
+      "neg_ratio": 0.6364,
+      "ttm_drop": 2.6152,
+      "loss": true
+     }
+    },
+    "yoy_turn": {
+     "score": 0.4,
+     "detail": "2026/08 營收 YoY +3.4%（前5月平均 +6.4%），MoM -21.4%",
+     "metrics": {
+      "yoy": 0.034,
+      "prev_avg": 0.0642,
+      "mom": -0.2136,
+      "turned": false
+     }
+    },
+    "valuation": {
+     "score": 0.4513474337094709,
+     "detail": "股價位於 3 年區間 29%；PBR 1.17（4 年百分位 54%）；PER 不適用（虧損）",
+     "metrics": {
+      "price_pos": 0.2927,
+      "pbr": 1.17,
+      "pbr_pct": 0.5424,
+      "per": 0.0
+     }
+    },
+    "theme": {
+     "score": 0.0,
+     "detail": "未列入題材清單",
+     "metrics": {}
+    },
+    "big_holder": {
+     "score": null,
+     "detail": "股權分散資料僅 1 週（需 ≥4 週）",
+     "metrics": {}
+    },
+    "insider": {
+     "score": null,
+     "detail": "董監持股快照不足 2 個月（每月累積）",
+     "metrics": {}
+    },
+    "media": {
+     "score": 0.9545454545454546,
+     "detail": "近90日新聞約 4 則",
+     "metrics": {
+      "news": 4.0,
+      "ptt": null
+     }
+    }
+   },
+   "links": {
+    "news": "https://news.google.com/search?q=%E5%BC%B7%E7%9B%9B%E6%96%B0%201463&hl=zh-TW",
+    "ptt": "https://www.ptt.cc/bbs/Stock/search?q=%E5%BC%B7%E7%9B%9B%E6%96%B0",
+    "dcard": "https://www.dcard.tw/search?query=%E5%BC%B7%E7%9B%9B%E6%96%B0&forum=stock",
+    "mobile01": "https://www.mobile01.com/googlesearch.php?q=%E5%BC%B7%E7%9B%9B%E6%96%B0",
+    "goodinfo": "https://goodinfo.tw/tw/StockDetail.asp?STOCK_ID=1463"
+   }
+  },
+  {
+   "code": "1451",
+   "name": "年興",
+   "market": "twse",
+   "industry": "紡織纖維",
+   "score": 61.6,
+   "coverage": 0.82,
+   "close": 17.0,
+   "date": "2026-10-05",
+   "trigger": {
+    "fired": false,
+    "detail": ""
+   },
+   "flags": [],
+   "signals": {
+    "base": {
+     "score": 0.9350703224570807,
+     "detail": "約 50 週箱型整理，區間 15.71–17.75（振幅 13%），現價位於箱內 63%",
+     "metrics": {
+      "days": 250.0,
+      "range": 0.1299,
+      "box_high": 17.75,
+      "box_low": 15.7099,
+      "pos": 0.6324,
+      "prior_drop": 0.1348
+     }
+    },
+    "volume_dry": {
+     "score": 0.8894538519047372,
+     "detail": "20日均量為年均量的 49%；近60日出現一年最低量（窒息量）",
+     "metrics": {
+      "ratio": 0.4948,
+      "choke": true,
+      "avg20_lots": 86.1817
+     }
+    },
+    "ma_squeeze": {
+     "score": 0.3100489527571439,
+     "detail": "5/10/20/60日均線差距 1.7%，近20日有 20 日差距 ≤ 4%；未成多頭排列；60日線下彎",
+     "metrics": {
+      "spread": 0.0175,
+      "full_bull": false,
+      "days_tight": 20.0,
+      "ma_long_slope": -0.001
+     }
+    },
+    "margin": {
+     "score": 0.6904016692749086,
+     "detail": "融資餘額 566 張，60日 -11%；處於近120日低點",
+     "metrics": {
+      "balance": 566.0,
+      "chg60": -0.1142,
+      "near_low": true
+     }
+    },
+    "smart_money": {
+     "score": 0.4857142857142857,
+     "detail": "法人近20日淨買 -183 張（占量 -10.6%，50% 天買超）；60日資金流 CMF +0.55",
+     "metrics": {
+      "cmf": 0.5509,
+      "branch_ratio": null
+     }
+    },
+    "turnaround": {
+     "score": 0.6375,
+     "detail": "過去兩年有 50% 月份營收年減；一年前的近12月營收較前一年 -6%",
+     "metrics": {
+      "neg_ratio": 0.5,
+      "ttm_drop": -0.055,
+      "loss": false
+     }
+    },
+    "yoy_turn": {
+     "score": 0.4,
+     "detail": "2026/08 營收 YoY +36.8%（前5月平均 +3.7%），MoM -2.4%",
+     "metrics": {
+      "yoy": 0.368,
+      "prev_avg": 0.0373,
+      "mom": -0.0242,
+      "turned": false
+     }
+    },
+    "valuation": {
+     "score": 0.7200495219167112,
+     "detail": "股價位於 3 年區間 43%；PBR 0.46（4 年百分位 7%）；PER 11.3",
+     "metrics": {
+      "price_pos": 0.4338,
+      "pbr": 0.46,
+      "pbr_pct": 0.0716,
+      "per": 11.29
+     }
+    },
+    "theme": {
+     "score": 0.0,
+     "detail": "未列入題材清單",
+     "metrics": {}
+    },
+    "big_holder": {
+     "score": null,
+     "detail": "股權分散資料僅 1 週（需 ≥4 週）",
+     "metrics": {}
+    },
+    "insider": {
+     "score": null,
+     "detail": "董監持股快照不足 2 個月（每月累積）",
+     "metrics": {}
+    },
+    "media": {
+     "score": 0.9090909090909091,
+     "detail": "近90日新聞約 5 則",
+     "metrics": {
+      "news": 5.0,
+      "ptt": null
+     }
+    }
+   },
+   "links": {
+    "news": "https://news.google.com/search?q=%E5%B9%B4%E8%88%88%201451&hl=zh-TW",
+    "ptt": "https://www.ptt.cc/bbs/Stock/search?q=%E5%B9%B4%E8%88%88",
+    "dcard": "https://www.dcard.tw/search?query=%E5%B9%B4%E8%88%88&forum=stock",
+    "mobile01": "https://www.mobile01.com/googlesearch.php?q=%E5%B9%B4%E8%88%88",
+    "goodinfo": "https://goodinfo.tw/tw/StockDetail.asp?STOCK_ID=1451"
+   }
+  },
+  {
+   "code": "1308",
+   "name": "亞聚",
+   "market": "twse",
+   "industry": "塑膠工業",
+   "score": 59.6,
+   "coverage": 0.82,
+   "close": 14.3,
+   "date": "2026-10-05",
+   "trigger": {
+    "fired": false,
+    "detail": ""
+   },
+   "flags": [],
+   "signals": {
+    "base": {
+     "score": 0.5682125868006417,
+     "detail": "約 24 週箱型整理，區間 12.45–15.73（振幅 26%），現價位於箱內 56%；整理前高點比箱頂高 48%，屬跌深後打底",
+     "metrics": {
+      "days": 120.0,
+      "range": 0.2636,
+      "box_high": 15.7315,
+      "box_low": 12.45,
+      "pos": 0.5638,
+      "prior_drop": 0.4828
+     }
+    },
+    "volume_dry": {
+     "score": 1.0,
+     "detail": "20日均量為年均量的 27%；近60日出現一年最低量（窒息量）",
+     "metrics": {
+      "ratio": 0.2668,
+      "choke": true,
+      "avg20_lots": 1201.7579
+     }
+    },
+    "ma_squeeze": {
+     "score": 0.47183876419727055,
+     "detail": "5/10/20/60日均線差距 2.8%，近20日有 20 日差距 ≤ 4%；完全多頭排列；60日線下彎",
+     "metrics": {
+      "spread": 0.0275,
+      "full_bull": true,
+      "days_tight": 20.0,
+      "ma_long_slope": -0.0021
+     }
+    },
+    "margin": {
+     "score": 0.5724374502342455,
+     "detail": "融資餘額 6,256 張，60日 -19%",
+     "metrics": {
+      "balance": 6256.0,
+      "chg60": -0.1865,
+      "near_low": false
+     }
+    },
+    "smart_money": {
+     "score": 0.48000000000000004,
+     "detail": "法人近20日淨買 +3,253 張（占量 +13.5%，60% 天買超）；60日資金流 CMF -0.19",
+     "metrics": {
+      "cmf": -0.1924,
+      "branch_ratio": null
+     }
+    },
+    "turnaround": {
+     "score": 0.9806818181818183,
+     "detail": "過去兩年有 59% 月份營收年減；一年前的近12月營收較前一年 -10%；目前本益比為負/不適用（虧損中）",
+     "metrics": {
+      "neg_ratio": 0.5909,
+      "ttm_drop": -0.0958,
+      "loss": true
+     }
+    },
+    "yoy_turn": {
+     "score": 0.5,
+     "detail": "2026/08 營收 YoY +12.8%（前5月平均 +7.9%），MoM +3.4%",
+     "metrics": {
+      "yoy": 0.128,
+      "prev_avg": 0.0791,
+      "mom": 0.034,
+      "turned": false
+     }
+    },
+    "valuation": {
+     "score": 0.6166337851634183,
+     "detail": "股價位於 3 年區間 30%；PBR 0.80（4 年百分位 37%）；PER 不適用（虧損）",
+     "metrics": {
+      "price_pos": 0.297,
+      "pbr": 0.8,
+      "pbr_pct": 0.3663,
+      "per": 0.0
+     }
+    },
+    "theme": {
+     "score": 0.0,
+     "detail": "未列入題材清單",
+     "metrics": {}
+    },
+    "big_holder": {
+     "score": null,
+     "detail": "股權分散資料僅 1 週（需 ≥4 週）",
+     "metrics": {}
+    },
+    "insider": {
+     "score": null,
+     "detail": "董監持股快照不足 2 個月（每月累積）",
+     "metrics": {}
+    },
+    "media": {
+     "score": 0.4090909090909091,
+     "detail": "近90日新聞約 16 則",
+     "metrics": {
+      "news": 16.0,
+      "ptt": null
+     }
+    }
+   },
+   "links": {
+    "news": "https://news.google.com/search?q=%E4%BA%9E%E8%81%9A%201308&hl=zh-TW",
+    "ptt": "https://www.ptt.cc/bbs/Stock/search?q=%E4%BA%9E%E8%81%9A",
+    "dcard": "https://www.dcard.tw/search?query=%E4%BA%9E%E8%81%9A&forum=stock",
+    "mobile01": "https://www.mobile01.com/googlesearch.php?q=%E4%BA%9E%E8%81%9A",
+    "goodinfo": "https://goodinfo.tw/tw/StockDetail.asp?STOCK_ID=1308"
+   }
+  },
+  {
+   "code": "1442",
+   "name": "名軒",
+   "market": "twse",
+   "industry": "建材營造",
+   "score": 59.4,
+   "coverage": 0.82,
+   "close": 26.1,
+   "date": "2026-10-05",
+   "trigger": {
+    "fired": false,
+    "detail": ""
+   },
+   "flags": [
+    "營收轉正"
+   ],
+   "signals": {
+    "base": {
+     "score": 0.7683426203240776,
+     "detail": "約 44 週箱型整理，區間 23.58–31.24（振幅 32%），現價位於箱內 33%；整理前高點比箱頂高 138%，屬跌深後打底",
+     "metrics": {
+      "days": 220.0,
+      "range": 0.3249,
+      "box_high": 31.242,
+      "box_low": 23.5815,
+      "pos": 0.3288,
+      "prior_drop": 1.3832
+     }
+    },
+    "volume_dry": {
+     "score": 0.857756703467621,
+     "detail": "20日均量為年均量的 52%；近60日出現一年最低量（窒息量）",
+     "metrics": {
+      "ratio": 0.5219,
+      "choke": true,
+      "avg20_lots": 498.2564
+     }
+    },
+    "ma_squeeze": {
+     "score": 0.15724484900778007,
+     "detail": "5/10/20/60日均線差距 3.9%，近20日有 18 日差距 ≤ 4%；未成多頭排列；60日線上揚",
+     "metrics": {
+      "spread": 0.0395,
+      "full_bull": false,
+      "days_tight": 18.0,
+      "ma_long_slope": 0.0114
+     }
+    },
+    "margin": {
+     "score": 0.2662922374836221,
+     "detail": "融資餘額 2,723 張，60日 -8%",
+     "metrics": {
+      "balance": 2723.0,
+      "chg60": -0.0838,
+      "near_low": false
+     }
+    },
+    "smart_money": {
+     "score": 0.27781905647665445,
+     "detail": "法人近20日淨買 -780 張（占量 -7.8%，65% 天買超）；60日資金流 CMF +0.07",
+     "metrics": {
+      "cmf": 0.0712,
+      "branch_ratio": null
+     }
+    },
+    "turnaround": {
+     "score": 0.85,
+     "detail": "過去兩年有 82% 月份營收年減；一年前的近12月營收較前一年 -58%",
+     "metrics": {
+      "neg_ratio": 0.8182,
+      "ttm_drop": -0.5822,
+      "loss": false
+     }
+    },
+    "yoy_turn": {
+     "score": 1.0,
+     "detail": "2026/08 營收 YoY +64.6%（前5月平均 -28.5%），MoM -2.1%",
+     "metrics": {
+      "yoy": 0.6457,
+      "prev_avg": -0.2854,
+      "mom": -0.0214,
+      "turned": true
+     }
+    },
+    "valuation": {
+     "score": 0.8919,
+     "detail": "股價位於 3 年區間 5%；PBR 1.32（4 年百分位 8%）；PER 15.6",
+     "metrics": {
+      "price_pos": 0.0495,
+      "pbr": 1.32,
+      "pbr_pct": 0.0774,
+      "per": 15.61
+     }
+    },
+    "theme": {
+     "score": 0.0,
+     "detail": "未列入題材清單",
+     "metrics": {}
+    },
+    "big_holder": {
+     "score": null,
+     "detail": "股權分散資料僅 1 週（需 ≥4 週）",
+     "metrics": {}
+    },
+    "insider": {
+     "score": null,
+     "detail": "董監持股快照不足 2 個月（每月累積）",
+     "metrics": {}
+    },
+    "media": {
+     "score": 0.6818181818181818,
+     "detail": "近90日新聞約 10 則",
+     "metrics": {
+      "news": 10.0,
+      "ptt": null
+     }
+    }
+   },
+   "links": {
+    "news": "https://news.google.com/search?q=%E5%90%8D%E8%BB%92%201442&hl=zh-TW",
+    "ptt": "https://www.ptt.cc/bbs/Stock/search?q=%E5%90%8D%E8%BB%92",
+    "dcard": "https://www.dcard.tw/search?query=%E5%90%8D%E8%BB%92&forum=stock",
+    "mobile01": "https://www.mobile01.com/googlesearch.php?q=%E5%90%8D%E8%BB%92",
+    "goodinfo": "https://goodinfo.tw/tw/StockDetail.asp?STOCK_ID=1442"
+   }
+  },
+  {
+   "code": "1449",
+   "name": "佳和",
+   "market": "twse",
+   "industry": "紡織纖維",
+   "score": 59.3,
+   "coverage": 0.82,
+   "close": 12.35,
+   "date": "2026-10-05",
+   "trigger": {
+    "fired": false,
+    "detail": ""
+   },
+   "flags": [],
+   "signals": {
+    "base": {
+     "score": 0.5072033848648817,
+     "detail": "約 24 週箱型整理，區間 11.80–16.35（振幅 39%），現價位於箱內 12%；整理前高點比箱頂高 68%，屬跌深後打底",
+     "metrics": {
+      "days": 120.0,
+      "range": 0.3856,
+      "box_high": 16.35,
+      "box_low": 11.8,
+      "pos": 0.1209,
+      "prior_drop": 0.6822
+     }
+    },
+    "volume_dry": {
+     "score": 1.0,
+     "detail": "20日均量為年均量的 21%；近60日出現一年最低量（窒息量）",
+     "metrics": {
+      "ratio": 0.2074,
+      "choke": true,
+      "avg20_lots": 276.8985
+     }
+    },
+    "ma_squeeze": {
+     "score": 0.3393894620329773,
+     "detail": "5/10/20/60日均線差距 1.5%，近20日有 9 日差距 ≤ 4%；未成多頭排列；60日線下彎",
+     "metrics": {
+      "spread": 0.0153,
+      "full_bull": false,
+      "days_tight": 9.0,
+      "ma_long_slope": -0.0242
+     }
+    },
+    "margin": {
+     "score": 0.6351635636899127,
+     "detail": "融資餘額 2,912 張，60日 -8%；處於近120日低點",
+     "metrics": {
+      "balance": 2912.0,
+      "chg60": -0.0811,
+      "near_low": true
+     }
+    },
+    "smart_money": {
+     "score": 0.5142857142857143,
+     "detail": "法人近20日淨買 +895 張（占量 +16.2%，75% 天買超）；60日資金流 CMF -0.05",
+     "metrics": {
+      "cmf": -0.0528,
+      "branch_ratio": null
+     }
+    },
+    "turnaround": {
+     "score": 0.7875,
+     "detail": "過去兩年有 50% 月份營收年減；一年前的近12月營收較前一年 -12%；目前本益比為負/不適用（虧損中）",
+     "metrics": {
+      "neg_ratio": 0.5,
+      "ttm_drop": -0.1229,
+      "loss": true
+     }
+    },
+    "yoy_turn": {
+     "score": 0.4,
+     "detail": "2026/08 營收 YoY +100.4%（前5月平均 +70.8%），MoM -14.6%",
+     "metrics": {
+      "yoy": 1.0044,
+      "prev_avg": 0.7076,
+      "mom": -0.1456,
+      "turned": false
+     }
+    },
+    "valuation": {
+     "score": 0.9322237200026785,
+     "detail": "股價位於 3 年區間 14%；PBR 0.64（4 年百分位 14%）；PER 不適用（虧損）",
+     "metrics": {
+      "price_pos": 0.1387,
+      "pbr": 0.64,
+      "pbr_pct": 0.1416,
+      "per": 0.0
+     }
+    },
+    "theme": {
+     "score": 0.0,
+     "detail": "未列入題材清單",
+     "metrics": {}
+    },
+    "big_holder": {
+     "score": null,
+     "detail": "股權分散資料僅 1 週（需 ≥4 週）",
+     "metrics": {}
+    },
+    "insider": {
+     "score": null,
+     "detail": "董監持股快照不足 2 個月（每月累積）",
+     "metrics": {}
+    },
+    "media": {
+     "score": 0.8636363636363636,
+     "detail": "近90日新聞約 6 則",
+     "metrics": {
+      "news": 6.0,
+      "ptt": null
+     }
+    }
+   },
+   "links": {
+    "news": "https://news.google.com/search?q=%E4%BD%B3%E5%92%8C%201449&hl=zh-TW",
+    "ptt": "https://www.ptt.cc/bbs/Stock/search?q=%E4%BD%B3%E5%92%8C",
+    "dcard": "https://www.dcard.tw/search?query=%E4%BD%B3%E5%92%8C&forum=stock",
+    "mobile01": "https://www.mobile01.com/googlesearch.php?q=%E4%BD%B3%E5%92%8C",
+    "goodinfo": "https://goodinfo.tw/tw/StockDetail.asp?STOCK_ID=1449"
+   }
+  },
+  {
+   "code": "1434",
+   "name": "福懋",
+   "market": "twse",
+   "industry": "紡織纖維",
+   "score": 58.5,
+   "coverage": 0.82,
+   "close": 17.85,
+   "date": "2026-10-05",
+   "trigger": {
+    "fired": false,
+    "detail": ""
+   },
+   "flags": [],
+   "signals": {
+    "base": {
+     "score": 0.7685101730931273,
+     "detail": "約 46 週箱型整理，區間 14.23–19.50（振幅 37%），現價位於箱內 69%",
+     "metrics": {
+      "days": 230.0,
+      "range": 0.3707,
+      "box_high": 19.5,
+      "box_low": 14.2266,
+      "pos": 0.6871,
+      "prior_drop": 0.2037
+     }
+    },
+    "volume_dry": {
+     "score": 0.8940020157862434,
+     "detail": "20日均量為年均量的 49%；近60日出現一年最低量（窒息量）",
+     "metrics": {
+      "ratio": 0.4909,
+      "choke": true,
+      "avg20_lots": 1480.5444
+     }
+    },
+    "ma_squeeze": {
+     "score": 0.611414376717482,
+     "detail": "5/10/20/60日均線差距 0.6%，近20日有 20 日差距 ≤ 4%；未成多頭排列；60日線上揚",
+     "metrics": {
+      "spread": 0.0064,
+      "full_bull": false,
+      "days_tight": 20.0,
+      "ma_long_slope": 0.007
+     }
+    },
+    "margin": {
+     "score": 0.7262501877158732,
+     "detail": "融資餘額 4,196 張，60日 -34%",
+     "metrics": {
+      "balance": 4196.0,
+      "chg60": -0.3386,
+      "near_low": false
+     }
+    },
+    "smart_money": {
+     "score": 0.4342857142857144,
+     "detail": "法人近20日淨買 +2,537 張（占量 +8.6%，40% 天買超）；60日資金流 CMF -0.24",
+     "metrics": {
+      "cmf": -0.2381,
+      "branch_ratio": null
+     }
+    },
+    "turnaround": {
+     "score": 0.85,
+     "detail": "過去兩年有 64% 月份營收年減；一年前的近12月營收較前一年 +0%",
+     "metrics": {
+      "neg_ratio": 0.6364,
+      "ttm_drop": 0.0044,
+      "loss": false
+     }
+    },
+    "yoy_turn": {
+     "score": 0.0,
+     "detail": "2026/08 營收 YoY -7.2%（前5月平均 -1.4%），MoM -5.8%",
+     "metrics": {
+      "yoy": -0.0717,
+      "prev_avg": -0.0144,
+      "mom": -0.0584,
+      "turned": false
+     }
+    },
+    "valuation": {
+     "score": 0.6488153631960168,
+     "detail": "股價位於 3 年區間 42%；PBR 0.63（4 年百分位 7%）；PER 19.8",
+     "metrics": {
+      "price_pos": 0.4167,
+      "pbr": 0.63,
+      "pbr_pct": 0.0691,
+      "per": 19.78
+     }
+    },
+    "theme": {
+     "score": 0.0,
+     "detail": "未列入題材清單",
+     "metrics": {}
+    },
+    "big_holder": {
+     "score": null,
+     "detail": "股權分散資料僅 1 週（需 ≥4 週）",
+     "metrics": {}
+    },
+    "insider": {
+     "score": null,
+     "detail": "董監持股快照不足 2 個月（每月累積）",
+     "metrics": {}
+    },
+    "media": {
+     "score": 0.6363636363636364,
+     "detail": "近90日新聞約 11 則",
+     "metrics": {
+      "news": 11.0,
+      "ptt": null
+     }
+    }
+   },
+   "links": {
+    "news": "https://news.google.com/search?q=%E7%A6%8F%E6%87%8B%201434&hl=zh-TW",
+    "ptt": "https://www.ptt.cc/bbs/Stock/search?q=%E7%A6%8F%E6%87%8B",
+    "dcard": "https://www.dcard.tw/search?query=%E7%A6%8F%E6%87%8B&forum=stock",
+    "mobile01": "https://www.mobile01.com/googlesearch.php?q=%E7%A6%8F%E6%87%8B",
+    "goodinfo": "https://goodinfo.tw/tw/StockDetail.asp?STOCK_ID=1434"
+   }
+  },
+  {
+   "code": "1325",
+   "name": "恆大",
+   "market": "twse",
+   "industry": "塑膠工業",
+   "score": 57.8,
+   "coverage": 0.82,
+   "close": 25.7,
+   "date": "2026-10-05",
+   "trigger": {
+    "fired": false,
+    "detail": ""
+   },
+   "flags": [],
+   "signals": {
+    "base": {
+     "score": 0.6613305333832752,
+     "detail": "約 32 週箱型整理，區間 24.05–30.35（振幅 26%），現價位於箱內 26%；整理前高點比箱頂高 53%，屬跌深後打底",
+     "metrics": {
+      "days": 160.0,
+      "range": 0.262,
+      "box_high": 30.35,
+      "box_low": 24.05,
+      "pos": 0.2619,
+      "prior_drop": 0.5284
+     }
+    },
+    "volume_dry": {
+     "score": 1.0,
+     "detail": "20日均量為年均量的 32%；近60日出現一年最低量（窒息量）",
+     "metrics": {
+      "ratio": 0.322,
+      "choke": true,
+      "avg20_lots": 158.5275
+     }
+    },
+    "ma_squeeze": {
+     "score": 0.5533155479263262,
+     "detail": "5/10/20/60日均線差距 1.1%，近20日有 20 日差距 ≤ 4%；未成多頭排列；60日線上揚",
+     "metrics": {
+      "spread": 0.0107,
+      "full_bull": false,
+      "days_tight": 20.0,
+      "ma_long_slope": 0.0076
+     }
+    },
+    "margin": {
+     "score": 0.5586970899470899,
+     "detail": "融資餘額 1,945 張，60日 -4%；處於近120日低點",
+     "metrics": {
+      "balance": 1945.0,
+      "chg60": -0.0352,
+      "near_low": true
+     }
+    },
+    "smart_money": {
+     "score": 0.5142857142857143,
+     "detail": "法人近20日淨買 +679 張（占量 +21.4%，75% 天買超）；60日資金流 CMF -0.24",
+     "metrics": {
+      "cmf": -0.2419,
+      "branch_ratio": null
+     }
+    },
+    "turnaround": {
+     "score": 1.0,
+     "detail": "過去兩年有 82% 月份營收年減；一年前的近12月營收較前一年 -13%；目前本益比為負/不適用（虧損中）",
+     "metrics": {
+      "neg_ratio": 0.8182,
+      "ttm_drop": -0.1348,
+      "loss": true
+     }
+    },
+    "yoy_turn": {
+     "score": 0.0,
+     "detail": "2026/08 營收 YoY -23.6%（前5月平均 -20.5%），MoM -21.8%",
+     "metrics": {
+      "yoy": -0.2358,
+      "prev_avg": -0.205,
+      "mom": -0.2182,
+      "turned": false
+     }
+    },
+    "valuation": {
+     "score": 0.66011246965196,
+     "detail": "股價位於 3 年區間 21%；PBR 0.86（4 年百分位 42%）；PER 不適用（虧損）",
+     "metrics": {
+      "price_pos": 0.2057,
+      "pbr": 0.86,
+      "pbr_pct": 0.4239,
+      "per": 0.0
+     }
+    },
+    "theme": {
+     "score": 0.0,
+     "detail": "未列入題材清單",
+     "metrics": {}
+    },
+    "big_holder": {
+     "score": null,
+     "detail": "股權分散資料僅 1 週（需 ≥4 週）",
+     "metrics": {}
+    },
+    "insider": {
+     "score": null,
+     "detail": "董監持股快照不足 2 個月（每月累積）",
+     "metrics": {}
+    },
+    "media": {
+     "score": 0.5909090909090909,
+     "detail": "近90日新聞約 12 則",
+     "metrics": {
+      "news": 12.0,
+      "ptt": null
+     }
+    }
+   },
+   "links": {
+    "news": "https://news.google.com/search?q=%E6%81%86%E5%A4%A7%201325&hl=zh-TW",
+    "ptt": "https://www.ptt.cc/bbs/Stock/search?q=%E6%81%86%E5%A4%A7",
+    "dcard": "https://www.dcard.tw/search?query=%E6%81%86%E5%A4%A7&forum=stock",
+    "mobile01": "https://www.mobile01.com/googlesearch.php?q=%E6%81%86%E5%A4%A7",
+    "goodinfo": "https://goodinfo.tw/tw/StockDetail.asp?STOCK_ID=1325"
+   }
+  },
+  {
+   "code": "1432",
+   "name": "大魯閣",
+   "market": "twse",
+   "industry": "貿易百貨、運動休閒",
+   "score": 57.1,
+   "coverage": 0.82,
+   "close": 14.95,
+   "date": "2026-10-05",
+   "trigger": {
+    "fired": false,
+    "detail": ""
+   },
+   "flags": [],
+   "signals": {
+    "base": {
+     "score": 0.8971962241983187,
+     "detail": "約 50 週箱型整理，區間 14.27–17.20（振幅 21%），現價位於箱內 23%",
+     "metrics": {
+      "days": 250.0,
+      "range": 0.2056,
+      "box_high": 17.2,
+      "box_low": 14.2667,
+      "pos": 0.233,
+      "prior_drop": 0.2791
+     }
+    },
+    "volume_dry": {
+     "score": 1.0,
+     "detail": "20日均量為年均量的 22%；近60日出現一年最低量（窒息量）",
+     "metrics": {
+      "ratio": 0.2198,
+      "choke": true,
+      "avg20_lots": 74.9086
+     }
+    },
+    "ma_squeeze": {
+     "score": 0.4840857355985663,
+     "detail": "5/10/20/60日均線差距 0.5%，近20日有 20 日差距 ≤ 4%；未成多頭排列；60日線下彎",
+     "metrics": {
+      "spread": 0.0048,
+      "full_bull": false,
+      "days_tight": 20.0,
+      "ma_long_slope": -0.0023
+     }
+    },
+    "margin": {
+     "score": 0.12,
+     "detail": "融資餘額 147 張，60日 +2%",
+     "metrics": {
+      "balance": 147.0,
+      "chg60": 0.0208,
+      "near_low": false
+     }
+    },
+    "smart_money": {
+     "score": 0.4914285714285715,
+     "detail": "法人近20日淨買 +97 張（占量 +6.5%，65% 天買超）；60日資金流 CMF -0.17",
+     "metrics": {
+      "cmf": -0.1707,
+      "branch_ratio": null
+     }
+    },
+    "turnaround": {
+     "score": 0.6375,
+     "detail": "過去兩年有 50% 月份營收年減；一年前的近12月營收較前一年 +2%",
+     "metrics": {
+      "neg_ratio": 0.5,
+      "ttm_drop": 0.0176,
+      "loss": false
+     }
+    },
+    "yoy_turn": {
+     "score": 0.17610000292632924,
+     "detail": "2026/08 營收 YoY -35.7%（前5月平均 -40.3%），MoM +17.2%",
+     "metrics": {
+      "yoy": -0.3571,
+      "prev_avg": -0.4027,
+      "mom": 0.1719,
+      "turned": false
+     }
+    },
+    "valuation": {
+     "score": 0.8361893928281912,
+     "detail": "股價位於 3 年區間 24%；PBR 1.22（4 年百分位 12%）；PER 2.9",
+     "metrics": {
+      "price_pos": 0.241,
+      "pbr": 1.22,
+      "pbr_pct": 0.116,
+      "per": 2.93
+     }
+    },
+    "theme": {
+     "score": 0.0,
+     "detail": "未列入題材清單",
+     "metrics": {}
+    },
+    "big_holder": {
+     "score": null,
+     "detail": "股權分散資料僅 1 週（需 ≥4 週）",
+     "metrics": {}
+    },
+    "insider": {
+     "score": null,
+     "detail": "董監持股快照不足 2 個月（每月累積）",
+     "metrics": {}
+    },
+    "media": {
+     "score": 0.8636363636363636,
+     "detail": "近90日新聞約 6 則",
+     "metrics": {
+      "news": 6.0,
+      "ptt": null
+     }
+    }
+   },
+   "links": {
+    "news": "https://news.google.com/search?q=%E5%A4%A7%E9%AD%AF%E9%96%A3%201432&hl=zh-TW",
+    "ptt": "https://www.ptt.cc/bbs/Stock/search?q=%E5%A4%A7%E9%AD%AF%E9%96%A3",
+    "dcard": "https://www.dcard.tw/search?query=%E5%A4%A7%E9%AD%AF%E9%96%A3&forum=stock",
+    "mobile01": "https://www.mobile01.com/googlesearch.php?q=%E5%A4%A7%E9%AD%AF%E9%96%A3",
+    "goodinfo": "https://goodinfo.tw/tw/StockDetail.asp?STOCK_ID=1432"
+   }
+  },
+  {
+   "code": "1315",
+   "name": "達新",
+   "market": "twse",
+   "industry": "塑膠工業",
+   "score": 56.8,
+   "coverage": 0.74,
+   "close": 68.7,
+   "date": "2026-10-05",
+   "trigger": {
+    "fired": false,
+    "detail": ""
+   },
+   "flags": [
+    "營收轉正"
+   ],
+   "signals": {
+    "base": {
+     "score": 0.911774689862171,
+     "detail": "約 50 週箱型整理，區間 58.48–68.80（振幅 18%），現價位於箱內 99%",
+     "metrics": {
+      "days": 250.0,
+      "range": 0.1765,
+      "box_high": 68.8,
+      "box_low": 58.481,
+      "pos": 0.9903,
+      "prior_drop": -0.0967
+     }
+    },
+    "volume_dry": {
+     "score": 0.0,
+     "detail": "20日均量為年均量的 141%",
+     "metrics": {
+      "ratio": 1.4132,
+      "choke": false,
+      "avg20_lots": 43.1251
+     }
+    },
+    "ma_squeeze": {
+     "score": 0.44999999999999996,
+     "detail": "5/10/20/60日均線差距 6.0%，近20日有 0 日差距 ≤ 4%；完全多頭排列；60日線上揚",
+     "metrics": {
+      "spread": 0.0602,
+      "full_bull": true,
+      "days_tight": 0.0,
+      "ma_long_slope": 0.0191
+     }
+    },
+    "margin": {
+     "score": null,
+     "detail": "融資餘額過小，不具參考性",
+     "metrics": {}
+    },
+    "smart_money": {
+     "score": 0.8265835352240586,
+     "detail": "法人近20日淨買 +34 張（占量 +4.0%，55% 天買超）；60日資金流 CMF +0.21",
+     "metrics": {
+      "cmf": 0.208,
+      "branch_ratio": null
+     }
+    },
+    "turnaround": {
+     "score": 0.4443181818181819,
+     "detail": "過去兩年有 41% 月份營收年減；一年前的近12月營收較前一年 +22%",
+     "metrics": {
+      "neg_ratio": 0.4091,
+      "ttm_drop": 0.2232,
+      "loss": false
+     }
+    },
+    "yoy_turn": {
+     "score": 1.0,
+     "detail": "2026/08 營收 YoY +9.7%（前5月平均 -9.3%），MoM +0.3%",
+     "metrics": {
+      "yoy": 0.0975,
+      "prev_avg": -0.093,
+      "mom": 0.0027,
+      "turned": true
+     }
+    },
+    "valuation": {
+     "score": 0.41890000000000005,
+     "detail": "股價位於 3 年區間 99%；PBR 0.49（4 年百分位 3%）；PER 28.1",
+     "metrics": {
+      "price_pos": 0.9924,
+      "pbr": 0.49,
+      "pbr_pct": 0.029,
+      "per": 28.11
+     }
+    },
+    "theme": {
+     "score": 0.0,
+     "detail": "未列入題材清單",
+     "metrics": {}
+    },
+    "big_holder": {
+     "score": null,
+     "detail": "股權分散資料僅 1 週（需 ≥4 週）",
+     "metrics": {}
+    },
+    "insider": {
+     "score": null,
+     "detail": "董監持股快照不足 2 個月（每月累積）",
+     "metrics": {}
+    },
+    "media": {
+     "score": 0.6818181818181818,
+     "detail": "近90日新聞約 10 則",
+     "metrics": {
+      "news": 10.0,
+      "ptt": null
+     }
+    }
+   },
+   "links": {
+    "news": "https://news.google.com/search?q=%E9%81%94%E6%96%B0%201315&hl=zh-TW",
+    "ptt": "https://www.ptt.cc/bbs/Stock/search?q=%E9%81%94%E6%96%B0",
+    "dcard": "https://www.dcard.tw/search?query=%E9%81%94%E6%96%B0&forum=stock",
+    "mobile01": "https://www.mobile01.com/googlesearch.php?q=%E9%81%94%E6%96%B0",
+    "goodinfo": "https://goodinfo.tw/tw/StockDetail.asp?STOCK_ID=1315"
+   }
+  },
+  {
+   "code": "1102",
+   "name": "亞泥",
+   "market": "twse",
+   "industry": "水泥工業",
+   "score": 55.2,
+   "coverage": 0.82,
+   "close": 35.15,
+   "date": "2026-10-05",
+   "trigger": {
+    "fired": false,
+    "detail": ""
+   },
+   "flags": [],
+   "signals": {
+    "base": {
+     "score": 0.8981481738290262,
+     "detail": "約 50 週箱型整理，區間 30.26–36.42（振幅 20%），現價位於箱內 79%",
+     "metrics": {
+      "days": 250.0,
+      "range": 0.2037,
+      "box_high": 36.4224,
+      "box_low": 30.2586,
+      "pos": 0.7936,
+      "prior_drop": 0.157
+     }
+    },
+    "volume_dry": {
+     "score": 0.43444924069381863,
+     "detail": "20日均量為年均量的 63%",
+     "metrics": {
+      "ratio": 0.6276,
+      "choke": false,
+      "avg20_lots": 7091.7492
+     }
+    },
+    "ma_squeeze": {
+     "score": 0.3,
+     "detail": "5/10/20/60日均線差距 4.1%，近20日有 1 日差距 ≤ 4%；偏多（中期>長期）；60日線上揚",
+     "metrics": {
+      "spread": 0.0408,
+      "full_bull": false,
+      "days_tight": 1.0,
+      "ma_long_slope": 0.01
+     }
+    },
+    "margin": {
+     "score": 0.7856315789473685,
+     "detail": "融資餘額 718 張，60日 -34%",
+     "metrics": {
+      "balance": 718.0,
+      "chg60": -0.3425,
+      "near_low": false
+     }
+    },
+    "smart_money": {
+     "score": 0.9542857142857144,
+     "detail": "法人近20日淨買 +29,186 張（占量 +20.6%，80% 天買超）；60日資金流 CMF +0.21",
+     "metrics": {
+      "cmf": 0.212,
+      "branch_ratio": null
+     }
+    },
+    "turnaround": {
+     "score": 0.85,
+     "detail": "過去兩年有 73% 月份營收年減；一年前的近12月營收較前一年 -2%",
+     "metrics": {
+      "neg_ratio": 0.7273,
+      "ttm_drop": -0.0193,
+      "loss": false
+     }
+    },
+    "yoy_turn": {
+     "score": 0.2059357918599917,
+     "detail": "2026/08 營收 YoY -1.3%（前5月平均 -7.7%），MoM +3.6%",
+     "metrics": {
+      "yoy": -0.013,
+      "prev_avg": -0.0765,
+      "mom": 0.0356,
+      "turned": false
+     }
+    },
+    "valuation": {
+     "score": 0.7506920816896778,
+     "detail": "股價位於 3 年區間 41%；PBR 0.68（4 年百分位 6%）；PER 9.8",
+     "metrics": {
+      "price_pos": 0.4116,
+      "pbr": 0.68,
+      "pbr_pct": 0.0617,
+      "per": 9.83
+     }
+    },
+    "theme": {
+     "score": 0.0,
+     "detail": "未列入題材清單",
+     "metrics": {}
+    },
+    "big_holder": {
+     "score": null,
+     "detail": "股權分散資料僅 1 週（需 ≥4 週）",
+     "metrics": {}
+    },
+    "insider": {
+     "score": null,
+     "detail": "董監持股快照不足 2 個月（每月累積）",
+     "metrics": {}
+    },
+    "media": {
+     "score": 0.0,
+     "detail": "近90日新聞約 45 則",
+     "metrics": {
+      "news": 45.0,
+      "ptt": null
+     }
+    }
+   },
+   "links": {
+    "news": "https://news.google.com/search?q=%E4%BA%9E%E6%B3%A5%201102&hl=zh-TW",
+    "ptt": "https://www.ptt.cc/bbs/Stock/search?q=%E4%BA%9E%E6%B3%A5",
+    "dcard": "https://www.dcard.tw/search?query=%E4%BA%9E%E6%B3%A5&forum=stock",
+    "mobile01": "https://www.mobile01.com/googlesearch.php?q=%E4%BA%9E%E6%B3%A5",
+    "goodinfo": "https://goodinfo.tw/tw/StockDetail.asp?STOCK_ID=1102"
+   }
+  },
+  {
+   "code": "1402",
+   "name": "遠東新",
+   "market": "twse",
+   "industry": "紡織纖維",
+   "score": 54.5,
+   "coverage": 0.82,
+   "close": 27.75,
+   "date": "2026-10-05",
+   "trigger": {
+    "fired": false,
+    "detail": ""
+   },
+   "flags": [],
+   "signals": {
+    "base": {
+     "score": 0.8212807564325482,
+     "detail": "約 50 週箱型整理，區間 22.36–30.35（振幅 36%），現價位於箱內 67%",
+     "metrics": {
+      "days": 250.0,
+      "range": 0.3574,
+      "box_high": 30.35,
+      "box_low": 22.3583,
+      "pos": 0.6747,
+      "prior_drop": 0.1646
+     }
+    },
+    "volume_dry": {
+     "score": 0.9605141354310209,
+     "detail": "20日均量為年均量的 43%；近60日出現一年最低量（窒息量）",
+     "metrics": {
+      "ratio": 0.4338,
+      "choke": true,
+      "avg20_lots": 7958.4291
+     }
+    },
+    "ma_squeeze": {
+     "score": 0.5407978653549795,
+     "detail": "5/10/20/60日均線差距 1.2%，近20日有 14 日差距 ≤ 4%；未成多頭排列；60日線上揚",
+     "metrics": {
+      "spread": 0.0116,
+      "full_bull": false,
+      "days_tight": 14.0,
+      "ma_long_slope": 0.005
+     }
+    },
+    "margin": {
+     "score": 0.4672159810646924,
+     "detail": "融資餘額 7,524 張，60日 -13%",
+     "metrics": {
+      "balance": 7524.0,
+      "chg60": -0.13,
+      "near_low": false
+     }
+    },
+    "smart_money": {
+     "score": 0.08846949082081702,
+     "detail": "法人近20日淨買 -11,347 張（占量 -7.1%，45% 天買超）；60日資金流 CMF +0.01",
+     "metrics": {
+      "cmf": 0.013,
+      "branch_ratio": null
+     }
+    },
+    "turnaround": {
+     "score": 0.85,
+     "detail": "過去兩年有 68% 月份營收年減；一年前的近12月營收較前一年 -4%",
+     "metrics": {
+      "neg_ratio": 0.6818,
+      "ttm_drop": -0.0406,
+      "loss": false
+     }
+    },
+    "yoy_turn": {
+     "score": 0.4,
+     "detail": "2026/08 營收 YoY +15.2%（前5月平均 +12.6%），MoM -2.3%",
+     "metrics": {
+      "yoy": 0.152,
+      "prev_avg": 0.1263,
+      "mom": -0.0229,
+      "turned": false
+     }
+    },
+    "valuation": {
+     "score": 0.7025694040986284,
+     "detail": "股價位於 3 年區間 42%；PBR 0.64（4 年百分位 9%）；PER 14.5",
+     "metrics": {
+      "price_pos": 0.4152,
+      "pbr": 0.64,
+      "pbr_pct": 0.0889,
+      "per": 14.53
+     }
+    },
+    "theme": {
+     "score": 0.0,
+     "detail": "未列入題材清單",
+     "metrics": {}
+    },
+    "big_holder": {
+     "score": null,
+     "detail": "股權分散資料僅 1 週（需 ≥4 週）",
+     "metrics": {}
+    },
+    "insider": {
+     "score": null,
+     "detail": "董監持股快照不足 2 個月（每月累積）",
+     "metrics": {}
+    },
+    "media": {
+     "score": 0.0,
+     "detail": "近90日新聞約 88 則",
+     "metrics": {
+      "news": 88.0,
+      "ptt": null
+     }
+    }
+   },
+   "links": {
+    "news": "https://news.google.com/search?q=%E9%81%A0%E6%9D%B1%E6%96%B0%201402&hl=zh-TW",
+    "ptt": "https://www.ptt.cc/bbs/Stock/search?q=%E9%81%A0%E6%9D%B1%E6%96%B0",
+    "dcard": "https://www.dcard.tw/search?query=%E9%81%A0%E6%9D%B1%E6%96%B0&forum=stock",
+    "mobile01": "https://www.mobile01.com/googlesearch.php?q=%E9%81%A0%E6%9D%B1%E6%96%B0",
+    "goodinfo": "https://goodinfo.tw/tw/StockDetail.asp?STOCK_ID=1402"
+   }
+  },
+  {
+   "code": "1210",
+   "name": "大成",
+   "market": "twse",
+   "industry": "食品工業",
+   "score": 53.1,
+   "coverage": 0.82,
+   "close": 51.6,
+   "date": "2026-10-05",
+   "trigger": {
+    "fired": false,
+    "detail": ""
+   },
+   "flags": [],
+   "signals": {
+    "base": {
+     "score": 0.7320513354101765,
+     "detail": "約 34 週箱型整理，區間 47.66–55.60（振幅 17%），現價位於箱內 50%",
+     "metrics": {
+      "days": 170.0,
+      "range": 0.1667,
+      "box_high": 55.6043,
+      "box_low": 47.6609,
+      "pos": 0.4959,
+      "prior_drop": 0.0737
+     }
+    },
+    "volume_dry": {
+     "score": 0.9960814915016676,
+     "detail": "20日均量為年均量的 40%；近60日出現一年最低量（窒息量）",
+     "metrics": {
+      "ratio": 0.4034,
+      "choke": true,
+      "avg20_lots": 987.9985
+     }
+    },
+    "ma_squeeze": {
+     "score": 0.2450331863886279,
+     "detail": "5/10/20/60日均線差距 2.2%，近20日有 20 日差距 ≤ 4%；未成多頭排列；60日線下彎",
+     "metrics": {
+      "spread": 0.0222,
+      "full_bull": false,
+      "days_tight": 20.0,
+      "ma_long_slope": -0.0055
+     }
+    },
+    "margin": {
+     "score": 0.7216565073074619,
+     "detail": "融資餘額 504 張，60日 -26%",
+     "metrics": {
+      "balance": 504.0,
+      "chg60": -0.2566,
+      "near_low": false
+     }
+    },
+    "smart_money": {
+     "score": 0.06285714285714288,
+     "detail": "法人近20日淨買 -759 張（占量 -3.8%，55% 天買超）；60日資金流 CMF -0.01",
+     "metrics": {
+      "cmf": -0.0068,
+      "branch_ratio": null
+     }
+    },
+    "turnaround": {
+     "score": 0.734090909090909,
+     "detail": "過去兩年有 55% 月份營收年減；一年前的近12月營收較前一年 -3%",
+     "metrics": {
+      "neg_ratio": 0.5455,
+      "ttm_drop": -0.0271,
+      "loss": false
+     }
+    },
+    "yoy_turn": {
+     "score": 0.5,
+     "detail": "2026/08 營收 YoY +13.4%（前5月平均 +10.6%），MoM +0.7%",
+     "metrics": {
+      "yoy": 0.1342,
+      "prev_avg": 0.1063,
+      "mom": 0.0067,
+      "turned": false
+     }
+    },
+    "valuation": {
+     "score": 0.5785166851843777,
+     "detail": "股價位於 3 年區間 48%；PBR 1.69（4 年百分位 2%）；PER 12.7",
+     "metrics": {
+      "price_pos": 0.4825,
+      "pbr": 1.69,
+      "pbr_pct": 0.023,
+      "per": 12.65
+     }
+    },
+    "theme": {
+     "score": 0.0,
+     "detail": "未列入題材清單",
+     "metrics": {}
+    },
+    "big_holder": {
+     "score": null,
+     "detail": "股權分散資料僅 1 週（需 ≥4 週）",
+     "metrics": {}
+    },
+    "insider": {
+     "score": null,
+     "detail": "董監持股快照不足 2 個月（每月累積）",
+     "metrics": {}
+    },
+    "media": {
+     "score": 0.36363636363636365,
+     "detail": "近90日新聞約 17 則",
+     "metrics": {
+      "news": 17.0,
+      "ptt": null
+     }
+    }
+   },
+   "links": {
+    "news": "https://news.google.com/search?q=%E5%A4%A7%E6%88%90%201210&hl=zh-TW",
+    "ptt": "https://www.ptt.cc/bbs/Stock/search?q=%E5%A4%A7%E6%88%90",
+    "dcard": "https://www.dcard.tw/search?query=%E5%A4%A7%E6%88%90&forum=stock",
+    "mobile01": "https://www.mobile01.com/googlesearch.php?q=%E5%A4%A7%E6%88%90",
+    "goodinfo": "https://goodinfo.tw/tw/StockDetail.asp?STOCK_ID=1210"
+   }
+  },
+  {
+   "code": "1456",
+   "name": "怡華",
+   "market": "twse",
+   "industry": "建材營造、紡織纖維",
+   "score": 52.8,
+   "coverage": 0.82,
+   "close": 14.85,
+   "date": "2026-10-05",
+   "trigger": {
+    "fired": false,
+    "detail": ""
+   },
+   "flags": [
+    "營收轉正"
+   ],
+   "signals": {
+    "base": {
+     "score": 0.824203385271925,
+     "detail": "約 48 週箱型整理，區間 11.95–15.60（振幅 31%），現價位於箱內 79%；整理前高點比箱頂高 59%，屬跌深後打底",
+     "metrics": {
+      "days": 240.0,
+      "range": 0.3054,
+      "box_high": 15.6,
+      "box_low": 11.95,
+      "pos": 0.7945,
+      "prior_drop": 0.5929
+     }
+    },
+    "volume_dry": {
+     "score": 0.0,
+     "detail": "20日均量為年均量的 239%",
+     "metrics": {
+      "ratio": 2.3867,
+      "choke": false,
+      "avg20_lots": 210.5667
+     }
+    },
+    "ma_squeeze": {
+     "score": 0.44999999999999996,
+     "detail": "5/10/20/60日均線差距 5.3%，近20日有 18 日差距 ≤ 4%；完全多頭排列；60日線上揚",
+     "metrics": {
+      "spread": 0.0529,
+      "full_bull": true,
+      "days_tight": 18.0,
+      "ma_long_slope": 0.0056
+     }
+    },
+    "margin": {
+     "score": 0.21893578266093086,
+     "detail": "融資餘額 759 張，60日 -10%",
+     "metrics": {
+      "balance": 759.0,
+      "chg60": -0.1028,
+      "near_low": false
+     }
+    },
+    "smart_money": {
+     "score": 0.23137527443798095,
+     "detail": "法人近20日淨買 +65 張（占量 +1.5%，55% 天買超）；60日資金流 CMF -0.12",
+     "metrics": {
+      "cmf": -0.1166,
+      "branch_ratio": null
+     }
+    },
+    "turnaround": {
+     "score": 0.85,
+     "detail": "過去兩年有 59% 月份營收年減；一年前的近12月營收較前一年 -25%",
+     "metrics": {
+      "neg_ratio": 0.5909,
+      "ttm_drop": -0.2482,
+      "loss": false
+     }
+    },
+    "yoy_turn": {
+     "score": 1.0,
+     "detail": "2026/08 營收 YoY +6526.1%（前5月平均 -28.2%），MoM +2356.0%",
+     "metrics": {
+      "yoy": 65.2608,
+      "prev_avg": -0.2815,
+      "mom": 23.5603,
+      "turned": true
+     }
+    },
+    "valuation": {
+     "score": 0.7900946788657204,
+     "detail": "股價位於 3 年區間 28%；PBR 0.77（4 年百分位 22%）；PER 5.2",
+     "metrics": {
+      "price_pos": 0.278,
+      "pbr": 0.77,
+      "pbr_pct": 0.2206,
+      "per": 5.21
+     }
+    },
+    "theme": {
+     "score": 0.0,
+     "detail": "未列入題材清單",
+     "metrics": {}
+    },
+    "big_holder": {
+     "score": null,
+     "detail": "股權分散資料僅 1 週（需 ≥4 週）",
+     "metrics": {}
+    },
+    "insider": {
+     "score": null,
+     "detail": "董監持股快照不足 2 個月（每月累積）",
+     "metrics": {}
+    },
+    "media": {
+     "score": 0.7272727272727273,
+     "detail": "近90日新聞約 9 則",
+     "metrics": {
+      "news": 9.0,
+      "ptt": null
+     }
+    }
+   },
+   "links": {
+    "news": "https://news.google.com/search?q=%E6%80%A1%E8%8F%AF%201456&hl=zh-TW",
+    "ptt": "https://www.ptt.cc/bbs/Stock/search?q=%E6%80%A1%E8%8F%AF",
+    "dcard": "https://www.dcard.tw/search?query=%E6%80%A1%E8%8F%AF&forum=stock",
+    "mobile01": "https://www.mobile01.com/googlesearch.php?q=%E6%80%A1%E8%8F%AF",
+    "goodinfo": "https://goodinfo.tw/tw/StockDetail.asp?STOCK_ID=1456"
+   }
+  },
+  {
+   "code": "1419",
+   "name": "新紡",
+   "market": "twse",
+   "industry": "紡織纖維",
+   "score": 52.1,
+   "coverage": 0.82,
+   "close": 65.3,
+   "date": "2026-10-05",
+   "trigger": {
+    "fired": false,
+    "detail": ""
+   },
+   "flags": [],
+   "signals": {
+    "base": {
+     "score": 0.7544979946375469,
+     "detail": "約 44 週箱型整理，區間 57.38–77.61（振幅 35%），現價位於箱內 39%",
+     "metrics": {
+      "days": 220.0,
+      "range": 0.3525,
+      "box_high": 77.6104,
+      "box_low": 57.3811,
+      "pos": 0.3915,
+      "prior_drop": -0.0029
+     }
+    },
+    "volume_dry": {
+     "score": 1.0,
+     "detail": "20日均量為年均量的 16%；近60日出現一年最低量（窒息量）",
+     "metrics": {
+      "ratio": 0.1588,
+      "choke": true,
+      "avg20_lots": 52.6457
+     }
+    },
+    "ma_squeeze": {
+     "score": 0.5583298637894157,
+     "detail": "5/10/20/60日均線差距 1.0%，近20日有 20 日差距 ≤ 4%；未成多頭排列；60日線上揚",
+     "metrics": {
+      "spread": 0.0103,
+      "full_bull": false,
+      "days_tight": 20.0,
+      "ma_long_slope": 0.0045
+     }
+    },
+    "margin": {
+     "score": 0.15061224489795919,
+     "detail": "融資餘額 1,231 張，60日 +0%",
+     "metrics": {
+      "balance": 1231.0,
+      "chg60": 0.0024,
+      "near_low": false
+     }
+    },
+    "smart_money": {
+     "score": 0.4654375626087862,
+     "detail": "法人近20日淨買 -201 張（占量 -19.1%，45% 天買超）；60日資金流 CMF +0.14",
+     "metrics": {
+      "cmf": 0.1449,
+      "branch_ratio": null
+     }
+    },
+    "turnaround": {
+     "score": 0.0,
+     "detail": "過去兩年有 9% 月份營收年減；一年前的近12月營收較前一年 +17%",
+     "metrics": {
+      "neg_ratio": 0.0909,
+      "ttm_drop": 0.1692,
+      "loss": false
+     }
+    },
+    "yoy_turn": {
+     "score": 0.5,
+     "detail": "2026/08 營收 YoY +5.9%（前5月平均 +26.6%），MoM +18.9%",
+     "metrics": {
+      "yoy": 0.0594,
+      "prev_avg": 0.2656,
+      "mom": 0.189,
+      "turned": false
+     }
+    },
+    "valuation": {
+     "score": 0.5940000000000001,
+     "detail": "股價位於 3 年區間 70%；PBR 0.86（4 年百分位 6%）；PER 4.7",
+     "metrics": {
+      "price_pos": 0.7028,
+      "pbr": 0.86,
+      "pbr_pct": 0.0584,
+      "per": 4.72
+     }
+    },
+    "theme": {
+     "score": 0.0,
+     "detail": "未列入題材清單",
+     "metrics": {}
+    },
+    "big_holder": {
+     "score": null,
+     "detail": "股權分散資料僅 1 週（需 ≥4 週）",
+     "metrics": {}
+    },
+    "insider": {
+     "score": null,
+     "detail": "董監持股快照不足 2 個月（每月累積）",
+     "metrics": {}
+    },
+    "media": {
+     "score": 0.8181818181818182,
+     "detail": "近90日新聞約 7 則",
+     "metrics": {
+      "news": 7.0,
+      "ptt": null
+     }
+    }
+   },
+   "links": {
+    "news": "https://news.google.com/search?q=%E6%96%B0%E7%B4%A1%201419&hl=zh-TW",
+    "ptt": "https://www.ptt.cc/bbs/Stock/search?q=%E6%96%B0%E7%B4%A1",
+    "dcard": "https://www.dcard.tw/search?query=%E6%96%B0%E7%B4%A1&forum=stock",
+    "mobile01": "https://www.mobile01.com/googlesearch.php?q=%E6%96%B0%E7%B4%A1",
+    "goodinfo": "https://goodinfo.tw/tw/StockDetail.asp?STOCK_ID=1419"
+   }
+  },
+  {
+   "code": "1454",
+   "name": "台富",
+   "market": "twse",
+   "industry": "紡織纖維",
+   "score": 52.0,
+   "coverage": 0.82,
+   "close": 12.05,
+   "date": "2026-10-05",
+   "trigger": {
+    "fired": false,
+    "detail": ""
+   },
+   "flags": [],
+   "signals": {
+    "base": {
+     "score": 0.8167581310231358,
+     "detail": "約 50 週箱型整理，區間 12.05–16.47（振幅 37%），現價位於箱內 0%",
+     "metrics": {
+      "days": 250.0,
+      "range": 0.3665,
+      "box_high": 16.4661,
+      "box_low": 12.05,
+      "pos": 0.0,
+      "prior_drop": 0.2048
+     }
+    },
+    "volume_dry": {
+     "score": 0.988078682673466,
+     "detail": "20日均量為年均量的 41%；近60日出現一年最低量（窒息量）",
+     "metrics": {
+      "ratio": 0.4102,
+      "choke": true,
+      "avg20_lots": 31.1105
+     }
+    },
+    "ma_squeeze": {
+     "score": 0.13408883332340238,
+     "detail": "5/10/20/60日均線差距 3.0%，近20日有 20 日差距 ≤ 4%；未成多頭排列；60日線下彎",
+     "metrics": {
+      "spread": 0.0302,
+      "full_bull": false,
+      "days_tight": 20.0,
+      "ma_long_slope": -0.0061
+     }
+    },
+    "margin": {
+     "score": 0.0,
+     "detail": "融資餘額 2,367 張，60日 +9%",
+     "metrics": {
+      "balance": 2367.0,
+      "chg60": 0.0873,
+      "near_low": false
+     }
+    },
+    "smart_money": {
+     "score": 0.571173987112161,
+     "detail": "法人近20日淨買 +31 張（占量 +5.0%，55% 天買超）；60日資金流 CMF +0.04",
+     "metrics": {
+      "cmf": 0.0359,
+      "branch_ratio": null
+     }
+    },
+    "turnaround": {
+     "score": 1.0,
+     "detail": "過去兩年有 68% 月份營收年減；一年前的近12月營收較前一年 -0%；目前本益比為負/不適用（虧損中）",
+     "metrics": {
+      "neg_ratio": 0.6818,
+      "ttm_drop": -0.0044,
+      "loss": true
+     }
+    },
+    "yoy_turn": {
+     "score": 0.10157333304762124,
+     "detail": "2026/09 營收 YoY -17.9%（前5月平均 -18.0%），MoM +36.5%",
+     "metrics": {
+      "yoy": -0.1791,
+      "prev_avg": -0.1801,
+      "mom": 0.3646,
+      "turned": false
+     }
+    },
+    "valuation": {
+     "score": 0.7775565843621399,
+     "detail": "股價位於 3 年區間 0%；PBR 1.13（4 年百分位 36%）；PER 不適用（虧損）",
+     "metrics": {
+      "price_pos": 0.0,
+      "pbr": 1.13,
+      "pbr_pct": 0.3588,
+      "per": 0.0
+     }
+    },
+    "theme": {
+     "score": 0.0,
+     "detail": "未列入題材清單",
+     "metrics": {}
+    },
+    "big_holder": {
+     "score": null,
+     "detail": "股權分散資料僅 1 週（需 ≥4 週）",
+     "metrics": {}
+    },
+    "insider": {
+     "score": null,
+     "detail": "董監持股快照不足 2 個月（每月累積）",
+     "metrics": {}
+    },
+    "media": {
+     "score": 0.7727272727272727,
+     "detail": "近90日新聞約 8 則",
+     "metrics": {
+      "news": 8.0,
+      "ptt": null
+     }
+    }
+   },
+   "links": {
+    "news": "https://news.google.com/search?q=%E5%8F%B0%E5%AF%8C%201454&hl=zh-TW",
+    "ptt": "https://www.ptt.cc/bbs/Stock/search?q=%E5%8F%B0%E5%AF%8C",
+    "dcard": "https://www.dcard.tw/search?query=%E5%8F%B0%E5%AF%8C&forum=stock",
+    "mobile01": "https://www.mobile01.com/googlesearch.php?q=%E5%8F%B0%E5%AF%8C",
+    "goodinfo": "https://goodinfo.tw/tw/StockDetail.asp?STOCK_ID=1454"
+   }
+  },
+  {
+   "code": "1446",
+   "name": "宏和",
+   "market": "twse",
+   "industry": "紡織纖維",
+   "score": 51.8,
+   "coverage": 0.82,
+   "close": 13.35,
+   "date": "2026-10-05",
+   "trigger": {
+    "fired": false,
+    "detail": ""
+   },
+   "flags": [],
+   "signals": {
+    "base": {
+     "score": 0.7080012832738496,
+     "detail": "約 34 週箱型整理，區間 13.30–16.16（振幅 21%），現價位於箱內 2%；整理前高點比箱頂高 208%，屬跌深後打底",
+     "metrics": {
+      "days": 170.0,
+      "range": 0.2148,
+      "box_high": 16.1564,
+      "box_low": 13.3,
+      "pos": 0.0175,
+      "prior_drop": 2.0754
+     }
+    },
+    "volume_dry": {
+     "score": 0.8666894488164438,
+     "detail": "20日均量為年均量的 51%；近60日出現一年最低量（窒息量）",
+     "metrics": {
+      "ratio": 0.5143,
+      "choke": true,
+      "avg20_lots": 117.8502
+     }
+    },
+    "ma_squeeze": {
+     "score": 0.1963794472951485,
+     "detail": "5/10/20/60日均線差距 2.6%，近20日有 8 日差距 ≤ 4%；未成多頭排列；60日線下彎",
+     "metrics": {
+      "spread": 0.0257,
+      "full_bull": false,
+      "days_tight": 8.0,
+      "ma_long_slope": -0.0247
+     }
+    },
+    "margin": {
+     "score": 0.46452601769758367,
+     "detail": "融資餘額 1,396 張，60日 -11%",
+     "metrics": {
+      "balance": 1396.0,
+      "chg60": -0.1114,
+      "near_low": false
+     }
+    },
+    "smart_money": {
+     "score": 0.022857142857142864,
+     "detail": "法人近20日淨買 -378 張（占量 -16.0%，20% 天買超）；60日資金流 CMF -0.21",
+     "metrics": {
+      "cmf": -0.2133,
+      "branch_ratio": null
+     }
+    },
+    "turnaround": {
+     "score": 0.85,
+     "detail": "過去兩年有 68% 月份營收年減；一年前的近12月營收較前一年 -37%",
+     "metrics": {
+      "neg_ratio": 0.6818,
+      "ttm_drop": -0.3712,
+      "loss": false
+     }
+    },
+    "yoy_turn": {
+     "score": 0.25046635274943363,
+     "detail": "2026/08 營收 YoY -27.0%（前5月平均 -36.0%），MoM +710.8%",
+     "metrics": {
+      "yoy": -0.2702,
+      "prev_avg": -0.3605,
+      "mom": 7.108,
+      "turned": false
+     }
+    },
+    "valuation": {
+     "score": 0.9574,
+     "detail": "股價位於 3 年區間 0%；PBR 0.69（4 年百分位 3%）；PER 14.3",
+     "metrics": {
+      "price_pos": 0.0014,
+      "pbr": 0.69,
+      "pbr_pct": 0.0255,
+      "per": 14.26
+     }
+    },
+    "theme": {
+     "score": 0.0,
+     "detail": "未列入題材清單",
+     "metrics": {}
+    },
+    "big_holder": {
+     "score": null,
+     "detail": "股權分散資料僅 1 週（需 ≥4 週）",
+     "metrics": {}
+    },
+    "insider": {
+     "score": null,
+     "detail": "董監持股快照不足 2 個月（每月累積）",
+     "metrics": {}
+    },
+    "media": {
+     "score": 1.0,
+     "detail": "近90日新聞約 1 則",
+     "metrics": {
+      "news": 1.0,
+      "ptt": null
+     }
+    }
+   },
+   "links": {
+    "news": "https://news.google.com/search?q=%E5%AE%8F%E5%92%8C%201446&hl=zh-TW",
+    "ptt": "https://www.ptt.cc/bbs/Stock/search?q=%E5%AE%8F%E5%92%8C",
+    "dcard": "https://www.dcard.tw/search?query=%E5%AE%8F%E5%92%8C&forum=stock",
+    "mobile01": "https://www.mobile01.com/googlesearch.php?q=%E5%AE%8F%E5%92%8C",
+    "goodinfo": "https://goodinfo.tw/tw/StockDetail.asp?STOCK_ID=1446"
+   }
+  },
+  {
+   "code": "1338",
+   "name": "廣華-KY",
+   "market": "twse",
+   "industry": "汽車工業",
+   "score": 51.3,
+   "coverage": 0.82,
+   "close": 14.95,
+   "date": "2026-10-05",
+   "trigger": {
+    "fired": false,
+    "detail": ""
+   },
+   "flags": [
+    "營收轉正"
+   ],
+   "signals": {
+    "base": {
+     "score": 0.5986456590721922,
+     "detail": "約 32 週箱型整理，區間 13.95–19.35（振幅 39%），現價位於箱內 19%；整理前高點比箱頂高 115%，屬跌深後打底",
+     "metrics": {
+      "days": 160.0,
+      "range": 0.3873,
+      "box_high": 19.3464,
+      "box_low": 13.9451,
+      "pos": 0.186,
+      "prior_drop": 1.1475
+     }
+    },
+    "volume_dry": {
+     "score": 0.5995813720392353,
+     "detail": "20日均量為年均量的 74%；近60日出現一年最低量（窒息量）",
+     "metrics": {
+      "ratio": 0.7432,
+      "choke": true,
+      "avg20_lots": 106.5527
+     }
+    },
+    "ma_squeeze": {
+     "score": 0.06484112216274748,
+     "detail": "5/10/20/60日均線差距 3.5%，近20日有 4 日差距 ≤ 4%；未成多頭排列；60日線下彎",
+     "metrics": {
+      "spread": 0.0353,
+      "full_bull": false,
+      "days_tight": 4.0,
+      "ma_long_slope": -0.0206
+     }
+    },
+    "margin": {
+     "score": 0.0,
+     "detail": "融資餘額 4,586 張，60日 +19%",
+     "metrics": {
+      "balance": 4586.0,
+      "chg60": 0.1936,
+      "near_low": false
+     }
+    },
+    "smart_money": {
+     "score": 0.48,
+     "detail": "法人近20日淨買 -171 張（占量 -8.0%，45% 天買超）；60日資金流 CMF +0.25",
+     "metrics": {
+      "cmf": 0.2509,
+      "branch_ratio": null
+     }
+    },
+    "turnaround": {
+     "score": 0.7875,
+     "detail": "過去兩年有 50% 月份營收年減；一年前的近12月營收較前一年 +1%；目前本益比為負/不適用（虧損中）",
+     "metrics": {
+      "neg_ratio": 0.5,
+      "ttm_drop": 0.013,
+      "loss": true
+     }
+    },
+    "yoy_turn": {
+     "score": 1.0,
+     "detail": "2026/08 營收 YoY +10.2%（前5月平均 -0.2%），MoM +35.8%",
+     "metrics": {
+      "yoy": 0.1019,
+      "prev_avg": -0.002,
+      "mom": 0.3581,
+      "turned": true
+     }
+    },
+    "valuation": {
+     "score": 1.0,
+     "detail": "股價位於 3 年區間 4%；PBR 0.21（4 年百分位 5%）；PER 不適用（虧損）",
+     "metrics": {
+      "price_pos": 0.0364,
+      "pbr": 0.21,
+      "pbr_pct": 0.0494,
+      "per": 0.0
+     }
+    },
+    "theme": {
+     "score": 0.0,
+     "detail": "未列入題材清單",
+     "metrics": {}
+    },
+    "big_holder": {
+     "score": null,
+     "detail": "股權分散資料僅 1 週（需 ≥4 週）",
+     "metrics": {}
+    },
+    "insider": {
+     "score": null,
+     "detail": "董監持股快照不足 2 個月（每月累積）",
+     "metrics": {}
+    },
+    "media": {
+     "score": 0.5909090909090909,
+     "detail": "近90日新聞約 12 則",
+     "metrics": {
+      "news": 12.0,
+      "ptt": null
+     }
+    }
+   },
+   "links": {
+    "news": "https://news.google.com/search?q=%E5%BB%A3%E8%8F%AF-KY%201338&hl=zh-TW",
+    "ptt": "https://www.ptt.cc/bbs/Stock/search?q=%E5%BB%A3%E8%8F%AF-KY",
+    "dcard": "https://www.dcard.tw/search?query=%E5%BB%A3%E8%8F%AF-KY&forum=stock",
+    "mobile01": "https://www.mobile01.com/googlesearch.php?q=%E5%BB%A3%E8%8F%AF-KY",
+    "goodinfo": "https://goodinfo.tw/tw/StockDetail.asp?STOCK_ID=1338"
+   }
+  },
+  {
+   "code": "1452",
+   "name": "宏益",
+   "market": "twse",
+   "industry": "紡織纖維",
+   "score": 50.4,
+   "coverage": 0.74,
+   "close": 10.6,
+   "date": "2026-10-05",
+   "trigger": {
+    "fired": false,
+    "detail": ""
+   },
+   "flags": [],
+   "signals": {
+    "base": {
+     "score": 0.8252427665225263,
+     "detail": "約 50 週箱型整理，區間 10.11–13.64（振幅 35%），現價位於箱內 14%",
+     "metrics": {
+      "days": 250.0,
+      "range": 0.3495,
+      "box_high": 13.645,
+      "box_low": 10.111,
+      "pos": 0.1384,
+      "prior_drop": 0.1938
+     }
+    },
+    "volume_dry": {
+     "score": 0.7982524999617646,
+     "detail": "20日均量為年均量的 57%；近60日出現一年最低量（窒息量）",
+     "metrics": {
+      "ratio": 0.5729,
+      "choke": true,
+      "avg20_lots": 55.2418
+     }
+    },
+    "ma_squeeze": {
+     "score": 0.0,
+     "detail": "5/10/20/60日均線差距 5.4%，近20日有 10 日差距 ≤ 4%；未成多頭排列；60日線下彎",
+     "metrics": {
+      "spread": 0.0539,
+      "full_bull": false,
+      "days_tight": 10.0,
+      "ma_long_slope": -0.0079
+     }
+    },
+    "margin": {
+     "score": null,
+     "detail": "融資餘額過小，不具參考性",
+     "metrics": {}
+    },
+    "smart_money": {
+     "score": 0.2890711401226818,
+     "detail": "法人近20日淨買 -180 張（占量 -16.3%，15% 天買超）；60日資金流 CMF +0.10",
+     "metrics": {
+      "cmf": 0.0952,
+      "branch_ratio": null
+     }
+    },
+    "turnaround": {
+     "score": 1.0,
+     "detail": "過去兩年有 64% 月份營收年減；一年前的近12月營收較前一年 -6%；目前本益比為負/不適用（虧損中）",
+     "metrics": {
+      "neg_ratio": 0.6364,
+      "ttm_drop": -0.0636,
+      "loss": true
+     }
+    },
+    "yoy_turn": {
+     "score": 0.0,
+     "detail": "2026/09 營收 YoY -50.2%（前5月平均 +0.2%），MoM -13.3%",
+     "metrics": {
+      "yoy": -0.5017,
+      "prev_avg": 0.0022,
+      "mom": -0.133,
+      "turned": false
+     }
+    },
+    "valuation": {
+     "score": 1.0,
+     "detail": "股價位於 3 年區間 8%；PBR 0.52（4 年百分位 1%）；PER 不適用（虧損）",
+     "metrics": {
+      "price_pos": 0.0791,
+      "pbr": 0.52,
+      "pbr_pct": 0.0066,
+      "per": 0.0
+     }
+    },
+    "theme": {
+     "score": 0.0,
+     "detail": "未列入題材清單",
+     "metrics": {}
+    },
+    "big_holder": {
+     "score": null,
+     "detail": "股權分散資料僅 1 週（需 ≥4 週）",
+     "metrics": {}
+    },
+    "insider": {
+     "score": null,
+     "detail": "董監持股快照不足 2 個月（每月累積）",
+     "metrics": {}
+    },
+    "media": {
+     "score": 0.8181818181818182,
+     "detail": "近90日新聞約 7 則",
+     "metrics": {
+      "news": 7.0,
+      "ptt": null
+     }
+    }
+   },
+   "links": {
+    "news": "https://news.google.com/search?q=%E5%AE%8F%E7%9B%8A%201452&hl=zh-TW",
+    "ptt": "https://www.ptt.cc/bbs/Stock/search?q=%E5%AE%8F%E7%9B%8A",
+    "dcard": "https://www.dcard.tw/search?query=%E5%AE%8F%E7%9B%8A&forum=stock",
+    "mobile01": "https://www.mobile01.com/googlesearch.php?q=%E5%AE%8F%E7%9B%8A",
+    "goodinfo": "https://goodinfo.tw/tw/StockDetail.asp?STOCK_ID=1452"
+   }
+  },
+  {
+   "code": "1307",
+   "name": "三芳",
+   "market": "twse",
+   "industry": "塑膠工業",
+   "score": 47.6,
+   "coverage": 0.82,
+   "close": 30.85,
+   "date": "2026-10-05",
+   "trigger": {
+    "fired": false,
+    "detail": ""
+   },
+   "flags": [],
+   "signals": {
+    "base": {
+     "score": 0.8745819391173808,
+     "detail": "約 50 週箱型整理，區間 28.06–35.10（振幅 25%），現價位於箱內 40%；整理前高點比箱頂高 33%，屬跌深後打底",
+     "metrics": {
+      "days": 250.0,
+      "range": 0.2508,
+      "box_high": 35.1017,
+      "box_low": 28.0626,
+      "pos": 0.396,
+      "prior_drop": 0.3319
+     }
+    },
+    "volume_dry": {
+     "score": 1.0,
+     "detail": "20日均量為年均量的 40%；近60日出現一年最低量（窒息量）",
+     "metrics": {
+      "ratio": 0.396,
+      "choke": true,
+      "avg20_lots": 432.5552
+     }
+    },
+    "ma_squeeze": {
+     "score": 0.3427470982488562,
+     "detail": "5/10/20/60日均線差距 1.5%，近20日有 17 日差距 ≤ 4%；未成多頭排列；60日線下彎",
+     "metrics": {
+      "spread": 0.0151,
+      "full_bull": false,
+      "days_tight": 17.0,
+      "ma_long_slope": -0.0088
+     }
+    },
+    "margin": {
+     "score": 0.2034756703078451,
+     "detail": "融資餘額 1,446 張，60日 +5%",
+     "metrics": {
+      "balance": 1446.0,
+      "chg60": 0.0486,
+      "near_low": false
+     }
+    },
+    "smart_money": {
+     "score": 0.03428571428571429,
+     "detail": "法人近20日淨買 -512 張（占量 -5.9%，30% 天買超）；60日資金流 CMF -0.13",
+     "metrics": {
+      "cmf": -0.1334,
+      "branch_ratio": null
+     }
+    },
+    "turnaround": {
+     "score": 0.3477272727272727,
+     "detail": "過去兩年有 36% 月份營收年減；一年前的近12月營收較前一年 +2%",
+     "metrics": {
+      "neg_ratio": 0.3636,
+      "ttm_drop": 0.025,
+      "loss": false
+     }
+    },
+    "yoy_turn": {
+     "score": 0.4,
+     "detail": "2026/08 營收 YoY +10.8%（前5月平均 +7.7%），MoM -1.2%",
+     "metrics": {
+      "yoy": 0.1083,
+      "prev_avg": 0.0775,
+      "mom": -0.0121,
+      "turned": false
+     }
+    },
+    "valuation": {
+     "score": 0.45861527654535206,
+     "detail": "股價位於 3 年區間 42%；PBR 1.25（4 年百分位 53%）；PER 9.3",
+     "metrics": {
+      "price_pos": 0.4195,
+      "pbr": 1.25,
+      "pbr_pct": 0.53,
+      "per": 9.34
+     }
+    },
+    "theme": {
+     "score": 0.0,
+     "detail": "未列入題材清單",
+     "metrics": {}
+    },
+    "big_holder": {
+     "score": null,
+     "detail": "股權分散資料僅 1 週（需 ≥4 週）",
+     "metrics": {}
+    },
+    "insider": {
+     "score": null,
+     "detail": "董監持股快照不足 2 個月（每月累積）",
+     "metrics": {}
+    },
+    "media": {
+     "score": 0.6818181818181818,
+     "detail": "近90日新聞約 10 則",
+     "metrics": {
+      "news": 10.0,
+      "ptt": null
+     }
+    }
+   },
+   "links": {
+    "news": "https://news.google.com/search?q=%E4%B8%89%E8%8A%B3%201307&hl=zh-TW",
+    "ptt": "https://www.ptt.cc/bbs/Stock/search?q=%E4%B8%89%E8%8A%B3",
+    "dcard": "https://www.dcard.tw/search?query=%E4%B8%89%E8%8A%B3&forum=stock",
+    "mobile01": "https://www.mobile01.com/googlesearch.php?q=%E4%B8%89%E8%8A%B3",
+    "goodinfo": "https://goodinfo.tw/tw/StockDetail.asp?STOCK_ID=1307"
+   }
+  },
+  {
+   "code": "1103",
+   "name": "嘉泥",
+   "market": "twse",
+   "industry": "水泥工業",
+   "score": 47.5,
+   "coverage": 0.82,
+   "close": 13.05,
+   "date": "2026-10-05",
+   "trigger": {
+    "fired": false,
+    "detail": ""
+   },
+   "flags": [],
+   "signals": {
+    "base": {
+     "score": 0.943579797772715,
+     "detail": "約 50 週箱型整理，區間 12.36–13.75（振幅 11%），現價位於箱內 50%",
+     "metrics": {
+      "days": 250.0,
+      "range": 0.1128,
+      "box_high": 13.7493,
+      "box_low": 12.3552,
+      "pos": 0.4984,
+      "prior_drop": 0.2672
+     }
+    },
+    "volume_dry": {
+     "score": 0.3,
+     "detail": "20日均量為年均量的 101%；近60日出現一年最低量（窒息量）",
+     "metrics": {
+      "ratio": 1.0089,
+      "choke": true,
+      "avg20_lots": 349.2675
+     }
+    },
+    "ma_squeeze": {
+     "score": 0.6841953422400919,
+     "detail": "5/10/20/60日均線差距 0.1%，近20日有 20 日差距 ≤ 4%；未成多頭排列；60日線上揚",
+     "metrics": {
+      "spread": 0.0011,
+      "full_bull": false,
+      "days_tight": 20.0,
+      "ma_long_slope": 0.0024
+     }
+    },
+    "margin": {
+     "score": 0.18698458442754334,
+     "detail": "融資餘額 4,154 張，60日 -3%",
+     "metrics": {
+      "balance": 4154.0,
+      "chg60": -0.0349,
+      "near_low": false
+     }
+    },
+    "smart_money": {
+     "score": 0.04571428571428573,
+     "detail": "法人近20日淨買 -349 張（占量 -5.0%，40% 天買超）；60日資金流 CMF -0.03",
+     "metrics": {
+      "cmf": -0.0346,
+      "branch_ratio": null
+     }
+    },
+    "turnaround": {
+     "score": 0.8306818181818183,
+     "detail": "過去兩年有 59% 月份營收年減；一年前的近12月營收較前一年 +1%",
+     "metrics": {
+      "neg_ratio": 0.5909,
+      "ttm_drop": 0.0131,
+      "loss": false
+     }
+    },
+    "yoy_turn": {
+     "score": 0.12833373144913748,
+     "detail": "2026/08 營收 YoY -2.5%（前5月平均 -10.2%），MoM -4.7%",
+     "metrics": {
+      "yoy": -0.0254,
+      "prev_avg": -0.1024,
+      "mom": -0.0473,
+      "turned": false
+     }
+    },
+    "valuation": {
+     "score": 0.8737684598863351,
+     "detail": "股價位於 3 年區間 14%；PBR 0.49（4 年百分位 27%）；PER 9.8",
+     "metrics": {
+      "price_pos": 0.1371,
+      "pbr": 0.49,
+      "pbr_pct": 0.2724,
+      "per": 9.85
+     }
+    },
+    "theme": {
+     "score": 0.0,
+     "detail": "未列入題材清單",
+     "metrics": {}
+    },
+    "big_holder": {
+     "score": null,
+     "detail": "股權分散資料僅 1 週（需 ≥4 週）",
+     "metrics": {}
+    },
+    "insider": {
+     "score": null,
+     "detail": "董監持股快照不足 2 個月（每月累積）",
+     "metrics": {}
+    },
+    "media": {
+     "score": 0.45454545454545453,
+     "detail": "近90日新聞約 15 則",
+     "metrics": {
+      "news": 15.0,
+      "ptt": null
+     }
+    }
+   },
+   "links": {
+    "news": "https://news.google.com/search?q=%E5%98%89%E6%B3%A5%201103&hl=zh-TW",
+    "ptt": "https://www.ptt.cc/bbs/Stock/search?q=%E5%98%89%E6%B3%A5",
+    "dcard": "https://www.dcard.tw/search?query=%E5%98%89%E6%B3%A5&forum=stock",
+    "mobile01": "https://www.mobile01.com/googlesearch.php?q=%E5%98%89%E6%B3%A5",
+    "goodinfo": "https://goodinfo.tw/tw/StockDetail.asp?STOCK_ID=1103"
+   }
+  },
+  {
+   "code": "1218",
+   "name": "泰山",
+   "market": "twse",
+   "industry": "食品工業",
+   "score": 46.3,
+   "coverage": 0.82,
+   "close": 14.4,
+   "date": "2026-10-05",
+   "trigger": {
+    "fired": false,
+    "detail": ""
+   },
+   "flags": [],
+   "signals": {
+    "base": {
+     "score": 0.8595613847699082,
+     "detail": "約 50 週箱型整理，區間 14.25–18.25（振幅 28%），現價位於箱內 4%",
+     "metrics": {
+      "days": 250.0,
+      "range": 0.2809,
+      "box_high": 18.2525,
+      "box_low": 14.25,
+      "pos": 0.0375,
+      "prior_drop": 0.129
+     }
+    },
+    "volume_dry": {
+     "score": 0.8491568524830475,
+     "detail": "20日均量為年均量的 53%；近60日出現一年最低量（窒息量）",
+     "metrics": {
+      "ratio": 0.5293,
+      "choke": true,
+      "avg20_lots": 480.4302
+     }
+    },
+    "ma_squeeze": {
+     "score": 0.0,
+     "detail": "5/10/20/60日均線差距 4.6%，近20日有 0 日差距 ≤ 4%；未成多頭排列；60日線下彎",
+     "metrics": {
+      "spread": 0.0461,
+      "full_bull": false,
+      "days_tight": 0.0,
+      "ma_long_slope": -0.0318
+     }
+    },
+    "margin": {
+     "score": 0.23057836398274892,
+     "detail": "融資餘額 1,590 張，60日 -3%",
+     "metrics": {
+      "balance": 1590.0,
+      "chg60": -0.0317,
+      "near_low": false
+     }
+    },
+    "smart_money": {
+     "score": 0.5364592242745524,
+     "detail": "法人近20日淨買 +1,391 張（占量 +14.5%，65% 天買超）；60日資金流 CMF +0.02",
+     "metrics": {
+      "cmf": 0.0158,
+      "branch_ratio": null
+     }
+    },
+    "turnaround": {
+     "score": 1.0,
+     "detail": "過去兩年有 73% 月份營收年減；一年前的近12月營收較前一年 -7%；目前本益比為負/不適用（虧損中）",
+     "metrics": {
+      "neg_ratio": 0.7273,
+      "ttm_drop": -0.0681,
+      "loss": true
+     }
+    },
+    "yoy_turn": {
+     "score": 0.0,
+     "detail": "2026/08 營收 YoY -48.0%（前5月平均 -7.6%），MoM -5.8%",
+     "metrics": {
+      "yoy": -0.4801,
+      "prev_avg": -0.0763,
+      "mom": -0.0581,
+      "turned": false
+     }
+    },
+    "valuation": {
+     "score": 1.0,
+     "detail": "股價位於 3 年區間 2%；PBR 0.61（4 年百分位 3%）；PER 不適用（虧損）",
+     "metrics": {
+      "price_pos": 0.0236,
+      "pbr": 0.61,
+      "pbr_pct": 0.028,
+      "per": 0.0
+     }
+    },
+    "theme": {
+     "score": 0.0,
+     "detail": "未列入題材清單",
+     "metrics": {}
+    },
+    "big_holder": {
+     "score": null,
+     "detail": "股權分散資料僅 1 週（需 ≥4 週）",
+     "metrics": {}
+    },
+    "insider": {
+     "score": null,
+     "detail": "董監持股快照不足 2 個月（每月累積）",
+     "metrics": {}
+    },
+    "media": {
+     "score": 0.0,
+     "detail": "近90日新聞約 100 則",
+     "metrics": {
+      "news": 100.0,
+      "ptt": null
+     }
+    }
+   },
+   "links": {
+    "news": "https://news.google.com/search?q=%E6%B3%B0%E5%B1%B1%201218&hl=zh-TW",
+    "ptt": "https://www.ptt.cc/bbs/Stock/search?q=%E6%B3%B0%E5%B1%B1",
+    "dcard": "https://www.dcard.tw/search?query=%E6%B3%B0%E5%B1%B1&forum=stock",
+    "mobile01": "https://www.mobile01.com/googlesearch.php?q=%E6%B3%B0%E5%B1%B1",
+    "goodinfo": "https://goodinfo.tw/tw/StockDetail.asp?STOCK_ID=1218"
+   }
+  },
+  {
+   "code": "1101",
+   "name": "台泥",
+   "market": "twse",
+   "industry": "水泥工業",
+   "score": 44.9,
+   "coverage": 0.82,
+   "close": 25.0,
+   "date": "2026-10-05",
+   "trigger": {
+    "fired": false,
+    "detail": ""
+   },
+   "flags": [],
+   "signals": {
+    "base": {
+     "score": 0.8332120854570249,
+     "detail": "約 50 週箱型整理，區間 19.72–26.30（振幅 33%），現價位於箱內 80%",
+     "metrics": {
+      "days": 250.0,
+      "range": 0.3336,
+      "box_high": 26.3,
+      "box_low": 19.7214,
+      "pos": 0.8024,
+      "prior_drop": 0.2462
+     }
+    },
+    "volume_dry": {
+     "score": 0.3,
+     "detail": "20日均量為年均量的 107%；近60日出現一年最低量（窒息量）",
+     "metrics": {
+      "ratio": 1.0699,
+      "choke": true,
+      "avg20_lots": 35139.976
+     }
+    },
+    "ma_squeeze": {
+     "score": 0.44999999999999996,
+     "detail": "5/10/20/60日均線差距 4.6%，近20日有 16 日差距 ≤ 4%；完全多頭排列；60日線上揚",
+     "metrics": {
+      "spread": 0.0463,
+      "full_bull": true,
+      "days_tight": 16.0,
+      "ma_long_slope": 0.0131
+     }
+    },
+    "margin": {
+     "score": 0.05765108988845956,
+     "detail": "融資餘額 39,755 張，60日 +12%",
+     "metrics": {
+      "balance": 39755.0,
+      "chg60": 0.1199,
+      "near_low": false
+     }
+    },
+    "smart_money": {
+     "score": 0.38497565370343184,
+     "detail": "法人近20日淨買 +13,006 張（占量 +1.9%，35% 天買超）；60日資金流 CMF +0.06",
+     "metrics": {
+      "cmf": 0.0623,
+      "branch_ratio": null
+     }
+    },
+    "turnaround": {
+     "score": 0.9806818181818183,
+     "detail": "過去兩年有 59% 月份營收年減；一年前的近12月營收較前一年 +23%；目前本益比為負/不適用（虧損中）",
+     "metrics": {
+      "neg_ratio": 0.5909,
+      "ttm_drop": 0.2339,
+      "loss": true
+     }
+    },
+    "yoy_turn": {
+     "score": 0.4,
+     "detail": "2026/08 營收 YoY +10.6%（前5月平均 +4.2%），MoM -1.7%",
+     "metrics": {
+      "yoy": 0.1065,
+      "prev_avg": 0.0424,
+      "mom": -0.0166,
+      "turned": false
+     }
+    },
+    "valuation": {
+     "score": 0.6121531546075912,
+     "detail": "股價位於 3 年區間 40%；PBR 0.82（4 年百分位 22%）；PER 不適用（虧損）",
+     "metrics": {
+      "price_pos": 0.4044,
+      "pbr": 0.82,
+      "pbr_pct": 0.2156,
+      "per": 0.0
+     }
+    },
+    "theme": {
+     "score": 0.0,
+     "detail": "未列入題材清單",
+     "metrics": {}
+    },
+    "big_holder": {
+     "score": null,
+     "detail": "股權分散資料僅 1 週（需 ≥4 週）",
+     "metrics": {}
+    },
+    "insider": {
+     "score": null,
+     "detail": "董監持股快照不足 2 個月（每月累積）",
+     "metrics": {}
+    },
+    "media": {
+     "score": 0.0,
+     "detail": "近90日新聞約 100 則",
+     "metrics": {
+      "news": 100.0,
+      "ptt": null
+     }
+    }
+   },
+   "links": {
+    "news": "https://news.google.com/search?q=%E5%8F%B0%E6%B3%A5%201101&hl=zh-TW",
+    "ptt": "https://www.ptt.cc/bbs/Stock/search?q=%E5%8F%B0%E6%B3%A5",
+    "dcard": "https://www.dcard.tw/search?query=%E5%8F%B0%E6%B3%A5&forum=stock",
+    "mobile01": "https://www.mobile01.com/googlesearch.php?q=%E5%8F%B0%E6%B3%A5",
+    "goodinfo": "https://goodinfo.tw/tw/StockDetail.asp?STOCK_ID=1101"
+   }
+  },
+  {
+   "code": "1231",
+   "name": "聯華食",
+   "market": "twse",
+   "industry": "食品工業",
+   "score": 44.4,
+   "coverage": 0.82,
+   "close": 78.5,
+   "date": "2026-10-05",
+   "trigger": {
+    "fired": false,
+    "detail": ""
+   },
+   "flags": [],
+   "signals": {
+    "base": {
+     "score": 0.7622917202844968,
+     "detail": "約 46 週箱型整理，區間 72.92–100.85（振幅 38%），現價位於箱內 20%；整理前高點比箱頂高 42%，屬跌深後打底",
+     "metrics": {
+      "days": 230.0,
+      "range": 0.3831,
+      "box_high": 100.8502,
+      "box_low": 72.9156,
+      "pos": 0.1999,
+      "prior_drop": 0.4152
+     }
+    },
+    "volume_dry": {
+     "score": 0.8339558637544486,
+     "detail": "20日均量為年均量的 54%；近60日出現一年最低量（窒息量）",
+     "metrics": {
+      "ratio": 0.5423,
+      "choke": true,
+      "avg20_lots": 222.1992
+     }
+    },
+    "ma_squeeze": {
+     "score": 0.5098812953681713,
+     "detail": "5/10/20/60日均線差距 1.4%，近20日有 20 日差距 ≤ 4%；未成多頭排列；60日線上揚",
+     "metrics": {
+      "spread": 0.0138,
+      "full_bull": false,
+      "days_tight": 20.0,
+      "ma_long_slope": 0.0029
+     }
+    },
+    "margin": {
+     "score": 0.20735294117647057,
+     "detail": "融資餘額 255 張，60日 +5%",
+     "metrics": {
+      "balance": 255.0,
+      "chg60": 0.0451,
+      "near_low": false
+     }
+    },
+    "smart_money": {
+     "score": 0.057142857142857155,
+     "detail": "法人近20日淨買 -331 張（占量 -7.4%，50% 天買超）；60日資金流 CMF -0.09",
+     "metrics": {
+      "cmf": -0.0859,
+      "branch_ratio": null
+     }
+    },
+    "turnaround": {
+     "score": 0.05795454545454541,
+     "detail": "過去兩年有 23% 月份營收年減；一年前的近12月營收較前一年 +12%",
+     "metrics": {
+      "neg_ratio": 0.2273,
+      "ttm_drop": 0.1151,
+      "loss": false
+     }
+    },
+    "yoy_turn": {
+     "score": 0.5,
+     "detail": "2026/08 營收 YoY +6.9%（前5月平均 +1.1%），MoM +5.4%",
+     "metrics": {
+      "yoy": 0.0689,
+      "prev_avg": 0.0111,
+      "mom": 0.0539,
+      "turned": false
+     }
+    },
+    "valuation": {
+     "score": 0.7289561394423554,
+     "detail": "股價位於 3 年區間 21%；PBR 3.16（4 年百分位 7%）；PER 16.1",
+     "metrics": {
+      "price_pos": 0.2132,
+      "pbr": 3.16,
+      "pbr_pct": 0.0691,
+      "per": 16.05
+     }
+    },
+    "theme": {
+     "score": 0.0,
+     "detail": "未列入題材清單",
+     "metrics": {}
+    },
+    "big_holder": {
+     "score": null,
+     "detail": "股權分散資料僅 1 週（需 ≥4 週）",
+     "metrics": {}
+    },
+    "insider": {
+     "score": null,
+     "detail": "董監持股快照不足 2 個月（每月累積）",
+     "metrics": {}
+    },
+    "media": {
+     "score": 0.3181818181818182,
+     "detail": "近90日新聞約 18 則",
+     "metrics": {
+      "news": 18.0,
+      "ptt": null
+     }
+    }
+   },
+   "links": {
+    "news": "https://news.google.com/search?q=%E8%81%AF%E8%8F%AF%E9%A3%9F%201231&hl=zh-TW",
+    "ptt": "https://www.ptt.cc/bbs/Stock/search?q=%E8%81%AF%E8%8F%AF%E9%A3%9F",
+    "dcard": "https://www.dcard.tw/search?query=%E8%81%AF%E8%8F%AF%E9%A3%9F&forum=stock",
+    "mobile01": "https://www.mobile01.com/googlesearch.php?q=%E8%81%AF%E8%8F%AF%E9%A3%9F",
+    "goodinfo": "https://goodinfo.tw/tw/StockDetail.asp?STOCK_ID=1231"
+   }
+  },
+  {
+   "code": "1316",
+   "name": "上曜",
+   "market": "twse",
+   "industry": "建材營造",
+   "score": 43.8,
+   "coverage": 0.77,
+   "close": 10.3,
+   "date": "2026-10-05",
+   "trigger": {
+    "fired": false,
+    "detail": ""
+   },
+   "flags": [],
+   "signals": {
+    "base": {
+     "score": 0.5690705397253861,
+     "detail": "約 28 週箱型整理，區間 9.60–13.00（振幅 35%），現價位於箱內 21%；整理前高點比箱頂高 102%，屬跌深後打底",
+     "metrics": {
+      "days": 140.0,
+      "range": 0.3542,
+      "box_high": 13.0,
+      "box_low": 9.6,
+      "pos": 0.2059,
+      "prior_drop": 1.0154
+     }
+    },
+    "volume_dry": {
+     "score": 0.8182041060562684,
+     "detail": "20日均量為年均量的 56%；近60日出現一年最低量（窒息量）",
+     "metrics": {
+      "ratio": 0.5558,
+      "choke": true,
+      "avg20_lots": 1721.9601
+     }
+    },
+    "ma_squeeze": {
+     "score": 0.4930825662967985,
+     "detail": "5/10/20/60日均線差距 1.5%，近20日有 9 日差距 ≤ 4%；未成多頭排列；60日線上揚",
+     "metrics": {
+      "spread": 0.015,
+      "full_bull": false,
+      "days_tight": 9.0,
+      "ma_long_slope": 0.0015
+     }
+    },
+    "margin": {
+     "score": 0.2870564688381269,
+     "detail": "融資餘額 10,157 張，60日 -7%",
+     "metrics": {
+      "balance": 10157.0,
+      "chg60": -0.0708,
+      "near_low": false
+     }
+    },
+    "smart_money": {
+     "score": 0.04571428571428573,
+     "detail": "法人近20日淨買 -165 張（占量 -0.5%，40% 天買超）；60日資金流 CMF -0.17",
+     "metrics": {
+      "cmf": -0.1722,
+      "branch_ratio": null
+     }
+    },
+    "turnaround": {
+     "score": 0.15,
+     "detail": "過去兩年有 0% 月份營收年減；一年前的近12月營收較前一年 +187%；目前本益比為負/不適用（虧損中）",
+     "metrics": {
+      "neg_ratio": 0.0,
+      "ttm_drop": 1.8716,
+      "loss": true
+     }
+    },
+    "yoy_turn": {
+     "score": 0.4,
+     "detail": "2026/08 營收 YoY +93.0%（前5月平均 +116.7%），MoM -0.8%",
+     "metrics": {
+      "yoy": 0.9305,
+      "prev_avg": 1.1673,
+      "mom": -0.0076,
+      "turned": false
+     }
+    },
+    "valuation": {
+     "score": 0.99,
+     "detail": "股價位於 3 年區間 4%；PBR 0.88（4 年百分位 8%）；PER 不適用（虧損）",
+     "metrics": {
+      "price_pos": 0.0422,
+      "pbr": 0.88,
+      "pbr_pct": 0.0828,
+      "per": 0.0
+     }
+    },
+    "theme": {
+     "score": 0.0,
+     "detail": "未列入題材清單",
+     "metrics": {}
+    },
+    "big_holder": {
+     "score": null,
+     "detail": "股權分散資料僅 1 週（需 ≥4 週）",
+     "metrics": {}
+    },
+    "insider": {
+     "score": null,
+     "detail": "董監持股快照不足 2 個月（每月累積）",
+     "metrics": {}
+    }
+   },
+   "links": {
+    "news": "https://news.google.com/search?q=%E4%B8%8A%E6%9B%9C%201316&hl=zh-TW",
+    "ptt": "https://www.ptt.cc/bbs/Stock/search?q=%E4%B8%8A%E6%9B%9C",
+    "dcard": "https://www.dcard.tw/search?query=%E4%B8%8A%E6%9B%9C&forum=stock",
+    "mobile01": "https://www.mobile01.com/googlesearch.php?q=%E4%B8%8A%E6%9B%9C",
+    "goodinfo": "https://goodinfo.tw/tw/StockDetail.asp?STOCK_ID=1316"
+   }
+  },
+  {
+   "code": "1418",
+   "name": "東華",
+   "market": "twse",
+   "industry": "紡織纖維",
+   "score": 43.6,
+   "coverage": 0.77,
+   "close": 18.7,
+   "date": "2026-10-05",
+   "trigger": {
+    "fired": false,
+    "detail": ""
+   },
+   "flags": [],
+   "signals": {
+    "base": {
+     "score": 0.6946693896934963,
+     "detail": "約 30 週箱型整理，區間 17.10–19.65（振幅 15%），現價位於箱內 63%；整理前高點比箱頂高 119%，屬跌深後打底",
+     "metrics": {
+      "days": 150.0,
+      "range": 0.1491,
+      "box_high": 19.65,
+      "box_low": 17.1,
+      "pos": 0.6275,
+      "prior_drop": 1.1908
+     }
+    },
+    "volume_dry": {
+     "score": 0.3,
+     "detail": "20日均量為年均量的 140%；近60日出現一年最低量（窒息量）",
+     "metrics": {
+      "ratio": 1.4003,
+      "choke": true,
+      "avg20_lots": 31.9763
+     }
+    },
+    "ma_squeeze": {
+     "score": 0.13455872828198237,
+     "detail": "5/10/20/60日均線差距 3.0%，近20日有 20 日差距 ≤ 4%；未成多頭排列；60日線下彎",
+     "metrics": {
+      "spread": 0.0302,
+      "full_bull": false,
+      "days_tight": 20.0,
+      "ma_long_slope": -0.0007
+     }
+    },
+    "margin": {
+     "score": 0.0410958904109589,
+     "detail": "融資餘額 778 張，60日 +4%",
+     "metrics": {
+      "balance": 778.0,
+      "chg60": 0.0401,
+      "near_low": false
+     }
+    },
+    "smart_money": {
+     "score": 0.5433964110880789,
+     "detail": "法人近20日淨買 +38 張（占量 +6.0%，55% 天買超）；60日資金流 CMF +0.03",
+     "metrics": {
+      "cmf": 0.0262,
+      "branch_ratio": null
+     }
+    },
+    "turnaround": {
+     "score": 1.0,
+     "detail": "過去兩年有 68% 月份營收年減；一年前的近12月營收較前一年 -43%；目前本益比為負/不適用（虧損中）",
+     "metrics": {
+      "neg_ratio": 0.6818,
+      "ttm_drop": -0.432,
+      "loss": true
+     }
+    },
+    "yoy_turn": {
+     "score": 0.4,
+     "detail": "2026/08 營收 YoY +123.5%（前5月平均 +2300.2%），MoM -95.4%",
+     "metrics": {
+      "yoy": 1.2353,
+      "prev_avg": 23.0019,
+      "mom": -0.9544,
+      "turned": false
+     }
+    },
+    "valuation": {
+     "score": 0.7915226337448561,
+     "detail": "股價位於 3 年區間 6%；PBR 0.88（4 年百分位 38%）；PER 不適用（虧損）",
+     "metrics": {
+      "price_pos": 0.0617,
+      "pbr": 0.88,
+      "pbr_pct": 0.3835,
+      "per": 0.0
+     }
+    },
+    "theme": {
+     "score": 0.0,
+     "detail": "未列入題材清單",
+     "metrics": {}
+    },
+    "big_holder": {
+     "score": null,
+     "detail": "股權分散資料僅 1 週（需 ≥4 週）",
+     "metrics": {}
+    },
+    "insider": {
+     "score": null,
+     "detail": "董監持股快照不足 2 個月（每月累積）",
+     "metrics": {}
+    }
+   },
+   "links": {
+    "news": "https://news.google.com/search?q=%E6%9D%B1%E8%8F%AF%201418&hl=zh-TW",
+    "ptt": "https://www.ptt.cc/bbs/Stock/search?q=%E6%9D%B1%E8%8F%AF",
+    "dcard": "https://www.dcard.tw/search?query=%E6%9D%B1%E8%8F%AF&forum=stock",
+    "mobile01": "https://www.mobile01.com/googlesearch.php?q=%E6%9D%B1%E8%8F%AF",
+    "goodinfo": "https://goodinfo.tw/tw/StockDetail.asp?STOCK_ID=1418"
+   }
+  },
+  {
+   "code": "1216",
+   "name": "統一",
+   "market": "twse",
+   "industry": "食品工業",
+   "score": 43.6,
+   "coverage": 0.77,
+   "close": 72.7,
+   "date": "2026-10-05",
+   "trigger": {
+    "fired": false,
+    "detail": ""
+   },
+   "flags": [],
+   "signals": {
+    "base": {
+     "score": 0.9081536871943929,
+     "detail": "約 50 週箱型整理，區間 66.06–78.20（振幅 18%），現價位於箱內 55%",
+     "metrics": {
+      "days": 250.0,
+      "range": 0.1837,
+      "box_high": 78.2,
+      "box_low": 66.0644,
+      "pos": 0.5468,
+      "prior_drop": 0.069
+     }
+    },
+    "volume_dry": {
+     "score": 0.658572661000307,
+     "detail": "20日均量為年均量的 69%；近60日出現一年最低量（窒息量）",
+     "metrics": {
+      "ratio": 0.6927,
+      "choke": true,
+      "avg20_lots": 8588.219
+     }
+    },
+    "ma_squeeze": {
+     "score": 0.34151861058120403,
+     "detail": "5/10/20/60日均線差距 2.6%，近20日有 20 日差距 ≤ 4%；未成多頭排列；60日線上揚",
+     "metrics": {
+      "spread": 0.0261,
+      "full_bull": false,
+      "days_tight": 20.0,
+      "ma_long_slope": 0.0017
+     }
+    },
+    "margin": {
+     "score": 0.06078947368421051,
+     "detail": "融資餘額 1,355 張，60日 +84%",
+     "metrics": {
+      "balance": 1355.0,
+      "chg60": 0.8435,
+      "near_low": false
+     }
+    },
+    "smart_money": {
+     "score": 0.47428571428571437,
+     "detail": "法人近20日淨買 -8,486 張（占量 -4.9%，40% 天買超）；60日資金流 CMF +0.22",
+     "metrics": {
+      "cmf": 0.2182,
+      "branch_ratio": null
+     }
+    },
+    "turnaround": {
+     "score": 0.05795454545454541,
+     "detail": "過去兩年有 23% 月份營收年減；一年前的近12月營收較前一年 +5%",
+     "metrics": {
+      "neg_ratio": 0.2273,
+      "ttm_drop": 0.0467,
+      "loss": false
+     }
+    },
+    "yoy_turn": {
+     "score": 0.5,
+     "detail": "2026/08 營收 YoY +3.8%（前5月平均 +4.2%），MoM +1.5%",
+     "metrics": {
+      "yoy": 0.0379,
+      "prev_avg": 0.042,
+      "mom": 0.015,
+      "turned": false
+     }
+    },
+    "valuation": {
+     "score": 0.4479094883720972,
+     "detail": "股價位於 3 年區間 54%；PBR 3.03（4 年百分位 11%）；PER 17.6",
+     "metrics": {
+      "price_pos": 0.5355,
+      "pbr": 3.03,
+      "pbr_pct": 0.1144,
+      "per": 17.56
+     }
+    },
+    "theme": {
+     "score": 0.0,
+     "detail": "未列入題材清單",
+     "metrics": {}
+    },
+    "big_holder": {
+     "score": null,
+     "detail": "股權分散資料僅 1 週（需 ≥4 週）",
+     "metrics": {}
+    },
+    "insider": {
+     "score": null,
+     "detail": "董監持股快照不足 2 個月（每月累積）",
+     "metrics": {}
+    }
+   },
+   "links": {
+    "news": "https://news.google.com/search?q=%E7%B5%B1%E4%B8%80%201216&hl=zh-TW",
+    "ptt": "https://www.ptt.cc/bbs/Stock/search?q=%E7%B5%B1%E4%B8%80",
+    "dcard": "https://www.dcard.tw/search?query=%E7%B5%B1%E4%B8%80&forum=stock",
+    "mobile01": "https://www.mobile01.com/googlesearch.php?q=%E7%B5%B1%E4%B8%80",
+    "goodinfo": "https://goodinfo.tw/tw/StockDetail.asp?STOCK_ID=1216"
+   }
+  },
+  {
+   "code": "1227",
+   "name": "佳格",
+   "market": "twse",
+   "industry": "食品工業",
+   "score": 43.5,
+   "coverage": 0.77,
+   "close": 27.75,
+   "date": "2026-10-05",
+   "trigger": {
+    "fired": false,
+    "detail": ""
+   },
+   "flags": [],
+   "signals": {
+    "base": {
+     "score": 0.8915770193135033,
+     "detail": "約 50 週箱型整理，區間 26.65–32.43（振幅 22%），現價位於箱內 19%",
+     "metrics": {
+      "days": 250.0,
+      "range": 0.2168,
+      "box_high": 32.431,
+      "box_low": 26.6517,
+      "pos": 0.19,
+      "prior_drop": 0.1929
+     }
+    },
+    "volume_dry": {
+     "score": 0.49781224803634416,
+     "detail": "20日均量為年均量的 57%",
+     "metrics": {
+      "ratio": 0.5733,
+      "choke": false,
+      "avg20_lots": 569.5914
+     }
+    },
+    "ma_squeeze": {
+     "score": 0.1985579407608915,
+     "detail": "5/10/20/60日均線差距 2.6%，近20日有 20 日差距 ≤ 4%；未成多頭排列；60日線下彎",
+     "metrics": {
+      "spread": 0.0256,
+      "full_bull": false,
+      "days_tight": 20.0,
+      "ma_long_slope": -0.0012
+     }
+    },
+    "margin": {
+     "score": 0.08838821490467937,
+     "detail": "融資餘額 1,287 張，60日 +42%",
+     "metrics": {
+      "balance": 1287.0,
+      "chg60": 0.4158,
+      "near_low": false
+     }
+    },
+    "smart_money": {
+     "score": 0.03428571428571429,
+     "detail": "法人近20日淨買 -2,388 張（占量 -21.0%，30% 天買超）；60日資金流 CMF -0.01",
+     "metrics": {
+      "cmf": -0.0122,
+      "branch_ratio": null
+     }
+    },
+    "turnaround": {
+     "score": 0.6375,
+     "detail": "過去兩年有 50% 月份營收年減；一年前的近12月營收較前一年 -1%",
+     "metrics": {
+      "neg_ratio": 0.5,
+      "ttm_drop": -0.0086,
+      "loss": false
+     }
+    },
+    "yoy_turn": {
+     "score": 0.5,
+     "detail": "2026/08 營收 YoY +10.7%（前5月平均 +2.3%），MoM +26.3%",
+     "metrics": {
+      "yoy": 0.107,
+      "prev_avg": 0.0231,
+      "mom": 0.263,
+      "turned": false
+     }
+    },
+    "valuation": {
+     "score": 0.8674000000000002,
+     "detail": "股價位於 3 年區間 9%；PBR 1.39（4 年百分位 4%）；PER 17.4",
+     "metrics": {
+      "price_pos": 0.0913,
+      "pbr": 1.39,
+      "pbr_pct": 0.0387,
+      "per": 17.36
+     }
+    },
+    "theme": {
+     "score": 0.0,
+     "detail": "未列入題材清單",
+     "metrics": {}
+    },
+    "big_holder": {
+     "score": null,
+     "detail": "股權分散資料僅 1 週（需 ≥4 週）",
+     "metrics": {}
+    },
+    "insider": {
+     "score": null,
+     "detail": "董監持股快照不足 2 個月（每月累積）",
+     "metrics": {}
+    }
+   },
+   "links": {
+    "news": "https://news.google.com/search?q=%E4%BD%B3%E6%A0%BC%201227&hl=zh-TW",
+    "ptt": "https://www.ptt.cc/bbs/Stock/search?q=%E4%BD%B3%E6%A0%BC",
+    "dcard": "https://www.dcard.tw/search?query=%E4%BD%B3%E6%A0%BC&forum=stock",
+    "mobile01": "https://www.mobile01.com/googlesearch.php?q=%E4%BD%B3%E6%A0%BC",
+    "goodinfo": "https://goodinfo.tw/tw/StockDetail.asp?STOCK_ID=1227"
+   }
+  },
+  {
+   "code": "1104",
+   "name": "環泥",
+   "market": "twse",
+   "industry": "水泥工業",
+   "score": 42.6,
+   "coverage": 0.77,
+   "close": 26.5,
+   "date": "2026-10-05",
+   "trigger": {
+    "fired": false,
+    "detail": ""
+   },
+   "flags": [
+    "營收轉正"
+   ],
+   "signals": {
+    "base": {
+     "score": 0.7982183713713522,
+     "detail": "約 40 週箱型整理，區間 25.46–29.86（振幅 17%），現價位於箱內 24%",
+     "metrics": {
+      "days": 200.0,
+      "range": 0.1728,
+      "box_high": 29.8615,
+      "box_low": 25.4618,
+      "pos": 0.236,
+      "prior_drop": 0.0266
+     }
+    },
+    "volume_dry": {
+     "score": 0.8308975659925102,
+     "detail": "20日均量為年均量的 54%；近60日出現一年最低量（窒息量）",
+     "metrics": {
+      "ratio": 0.5449,
+      "choke": true,
+      "avg20_lots": 434.9607
+     }
+    },
+    "ma_squeeze": {
+     "score": 0.3930424231403294,
+     "detail": "5/10/20/60日均線差距 1.1%，近20日有 20 日差距 ≤ 4%；未成多頭排列；60日線下彎",
+     "metrics": {
+      "spread": 0.0114,
+      "full_bull": false,
+      "days_tight": 20.0,
+      "ma_long_slope": -0.0026
+     }
+    },
+    "margin": {
+     "score": 0.047762747138397496,
+     "detail": "融資餘額 1,692 張，60日 +10%",
+     "metrics": {
+      "balance": 1692.0,
+      "chg60": 0.0966,
+      "near_low": false
+     }
+    },
+    "smart_money": {
+     "score": 0.06660047551119509,
+     "detail": "法人近20日淨買 -500 張（占量 -5.8%，35% 天買超）；60日資金流 CMF +0.01",
+     "metrics": {
+      "cmf": 0.0093,
+      "branch_ratio": null
+     }
+    },
+    "turnaround": {
+     "score": 0.8306818181818183,
+     "detail": "過去兩年有 59% 月份營收年減；一年前的近12月營收較前一年 -4%",
+     "metrics": {
+      "neg_ratio": 0.5909,
+      "ttm_drop": -0.0387,
+      "loss": false
+     }
+    },
+    "yoy_turn": {
+     "score": 0.0,
+     "detail": "2026/08 營收 YoY -14.2%（前5月平均 -5.6%），MoM -22.0%",
+     "metrics": {
+      "yoy": -0.1418,
+      "prev_avg": -0.0558,
+      "mom": -0.2197,
+      "turned": true
+     }
+    },
+    "valuation": {
+     "score": 0.5218877806010198,
+     "detail": "股價位於 3 年區間 58%；PBR 0.74（4 年百分位 27%）；PER 9.8",
+     "metrics": {
+      "price_pos": 0.5815,
+      "pbr": 0.74,
+      "pbr_pct": 0.2658,
+      "per": 9.83
+     }
+    },
+    "theme": {
+     "score": 0.0,
+     "detail": "未列入題材清單",
+     "metrics": {}
+    },
+    "big_holder": {
+     "score": null,
+     "detail": "股權分散資料僅 1 週（需 ≥4 週）",
+     "metrics": {}
+    },
+    "insider": {
+     "score": null,
+     "detail": "董監持股快照不足 2 個月（每月累積）",
+     "metrics": {}
+    }
+   },
+   "links": {
+    "news": "https://news.google.com/search?q=%E7%92%B0%E6%B3%A5%201104&hl=zh-TW",
+    "ptt": "https://www.ptt.cc/bbs/Stock/search?q=%E7%92%B0%E6%B3%A5",
+    "dcard": "https://www.dcard.tw/search?query=%E7%92%B0%E6%B3%A5&forum=stock",
+    "mobile01": "https://www.mobile01.com/googlesearch.php?q=%E7%92%B0%E6%B3%A5",
+    "goodinfo": "https://goodinfo.tw/tw/StockDetail.asp?STOCK_ID=1104"
+   }
+  },
+  {
+   "code": "1416",
+   "name": "廣豐",
+   "market": "twse",
+   "industry": "其他",
+   "score": 41.3,
+   "coverage": 0.77,
+   "close": 11.85,
+   "date": "2026-10-05",
+   "trigger": {
+    "fired": false,
+    "detail": ""
+   },
+   "flags": [],
+   "signals": {
+    "base": {
+     "score": 0.9267013307520542,
+     "detail": "約 50 週箱型整理，區間 10.51–12.05（振幅 15%），現價位於箱內 87%",
+     "metrics": {
+      "days": 250.0,
+      "range": 0.1466,
+      "box_high": 12.05,
+      "box_low": 10.5094,
+      "pos": 0.8702,
+      "prior_drop": 0.0489
+     }
+    },
+    "volume_dry": {
+     "score": 0.08054452161544122,
+     "detail": "20日均量為年均量的 93%",
+     "metrics": {
+      "ratio": 0.931,
+      "choke": false,
+      "avg20_lots": 258.6628
+     }
+    },
+    "ma_squeeze": {
+     "score": 0.6886426486681637,
+     "detail": "5/10/20/60日均線差距 2.3%，近20日有 14 日差距 ≤ 4%；完全多頭排列；60日線上揚",
+     "metrics": {
+      "spread": 0.0226,
+      "full_bull": true,
+      "days_tight": 14.0,
+      "ma_long_slope": 0.0079
+     }
+    },
+    "margin": {
+     "score": 0.025419932810750268,
+     "detail": "融資餘額 5,698 張，60日 +70%",
+     "metrics": {
+      "balance": 5698.0,
+      "chg60": 0.6963,
+      "near_low": false
+     }
+    },
+    "smart_money": {
+     "score": 0.44571428571428573,
+     "detail": "法人近20日淨買 -759 張（占量 -14.7%，15% 天買超）；60日資金流 CMF +0.27",
+     "metrics": {
+      "cmf": 0.2682,
+      "branch_ratio": null
+     }
+    },
+    "turnaround": {
+     "score": 0.0,
+     "detail": "過去兩年有 18% 月份營收年減；一年前的近12月營收較前一年 +7%",
+     "metrics": {
+      "neg_ratio": 0.1818,
+      "ttm_drop": 0.0713,
+      "loss": false
+     }
+    },
+    "yoy_turn": {
+     "score": 0.5,
+     "detail": "2026/08 營收 YoY +46.0%（前5月平均 +52.5%），MoM +0.7%",
+     "metrics": {
+      "yoy": 0.4599,
+      "prev_avg": 0.5247,
+      "mom": 0.007,
+      "turned": false
+     }
+    },
+    "valuation": {
+     "score": 0.5754024691358024,
+     "detail": "股價位於 3 年區間 78%；PBR 0.49（4 年百分位 14%）；PER 10.0",
+     "metrics": {
+      "price_pos": 0.7829,
+      "pbr": 0.49,
+      "pbr_pct": 0.1432,
+      "per": 10.04
+     }
+    },
+    "theme": {
+     "score": 0.0,
+     "detail": "未列入題材清單",
+     "metrics": {}
+    },
+    "big_holder": {
+     "score": null,
+     "detail": "股權分散資料僅 1 週（需 ≥4 週）",
+     "metrics": {}
+    },
+    "insider": {
+     "score": null,
+     "detail": "董監持股快照不足 2 個月（每月累積）",
+     "metrics": {}
+    }
+   },
+   "links": {
+    "news": "https://news.google.com/search?q=%E5%BB%A3%E8%B1%90%201416&hl=zh-TW",
+    "ptt": "https://www.ptt.cc/bbs/Stock/search?q=%E5%BB%A3%E8%B1%90",
+    "dcard": "https://www.dcard.tw/search?query=%E5%BB%A3%E8%B1%90&forum=stock",
+    "mobile01": "https://www.mobile01.com/googlesearch.php?q=%E5%BB%A3%E8%B1%90",
+    "goodinfo": "https://goodinfo.tw/tw/StockDetail.asp?STOCK_ID=1416"
+   }
+  },
+  {
+   "code": "1256",
+   "name": "鮮活果汁-KY",
+   "market": "twse",
+   "industry": "食品工業",
+   "score": 40.2,
+   "coverage": 0.77,
+   "close": 168.0,
+   "date": "2026-10-05",
+   "trigger": {
+    "fired": false,
+    "detail": ""
+   },
+   "flags": [],
+   "signals": {
+    "base": {
+     "score": 0.5062913601024857,
+     "detail": "約 24 週箱型整理，區間 146.00–202.57（振幅 39%），現價位於箱內 39%",
+     "metrics": {
+      "days": 120.0,
+      "range": 0.3874,
+      "box_high": 202.5692,
+      "box_low": 146.0045,
+      "pos": 0.3889,
+      "prior_drop": 0.2064
+     }
+    },
+    "volume_dry": {
+     "score": 0.9111139411672202,
+     "detail": "20日均量為年均量的 48%；近60日出現一年最低量（窒息量）",
+     "metrics": {
+      "ratio": 0.4762,
+      "choke": true,
+      "avg20_lots": 38.6066
+     }
+    },
+    "ma_squeeze": {
+     "score": 0.0,
+     "detail": "5/10/20/60日均線差距 5.9%，近20日有 3 日差距 ≤ 4%；未成多頭排列；60日線下彎",
+     "metrics": {
+      "spread": 0.0593,
+      "full_bull": false,
+      "days_tight": 3.0,
+      "ma_long_slope": -0.0139
+     }
+    },
+    "margin": {
+     "score": 0.4370294110873121,
+     "detail": "融資餘額 306 張，60日 -13%",
+     "metrics": {
+      "balance": 306.0,
+      "chg60": -0.1331,
+      "near_low": false
+     }
+    },
+    "smart_money": {
+     "score": 0.022857142857142864,
+     "detail": "法人近20日淨買 -155 張（占量 -20.1%，20% 天買超）；60日資金流 CMF -0.24",
+     "metrics": {
+      "cmf": -0.2449,
+      "branch_ratio": null
+     }
+    },
+    "turnaround": {
+     "score": 0.5409090909090909,
+     "detail": "過去兩年有 45% 月份營收年減；一年前的近12月營收較前一年 -6%",
+     "metrics": {
+      "neg_ratio": 0.4545,
+      "ttm_drop": -0.0551,
+      "loss": false
+     }
+    },
+    "yoy_turn": {
+     "score": 0.5,
+     "detail": "2026/08 營收 YoY +25.5%（前5月平均 +42.3%），MoM +4.8%",
+     "metrics": {
+      "yoy": 0.2555,
+      "prev_avg": 0.4226,
+      "mom": 0.0477,
+      "turned": false
+     }
+    },
+    "valuation": {
+     "score": 0.5539527253981147,
+     "detail": "股價位於 3 年區間 49%；PBR 1.43（4 年百分位 22%）；PER 10.8",
+     "metrics": {
+      "price_pos": 0.4861,
+      "pbr": 1.43,
+      "pbr_pct": 0.2181,
+      "per": 10.8
+     }
+    },
+    "theme": {
+     "score": 0.0,
+     "detail": "未列入題材清單",
+     "metrics": {}
+    },
+    "big_holder": {
+     "score": null,
+     "detail": "股權分散資料僅 1 週（需 ≥4 週）",
+     "metrics": {}
+    },
+    "insider": {
+     "score": null,
+     "detail": "董監持股快照不足 2 個月（每月累積）",
+     "metrics": {}
+    }
+   },
+   "links": {
+    "news": "https://news.google.com/search?q=%E9%AE%AE%E6%B4%BB%E6%9E%9C%E6%B1%81-KY%201256&hl=zh-TW",
+    "ptt": "https://www.ptt.cc/bbs/Stock/search?q=%E9%AE%AE%E6%B4%BB%E6%9E%9C%E6%B1%81-KY",
+    "dcard": "https://www.dcard.tw/search?query=%E9%AE%AE%E6%B4%BB%E6%9E%9C%E6%B1%81-KY&forum=stock",
+    "mobile01": "https://www.mobile01.com/googlesearch.php?q=%E9%AE%AE%E6%B4%BB%E6%9E%9C%E6%B1%81-KY",
+    "goodinfo": "https://goodinfo.tw/tw/StockDetail.asp?STOCK_ID=1256"
+   }
+  },
+  {
+   "code": "1201",
+   "name": "味全",
+   "market": "twse",
+   "industry": "食品工業",
+   "score": 39.7,
+   "coverage": 0.77,
+   "close": 11.4,
+   "date": "2026-10-05",
+   "trigger": {
+    "fired": false,
+    "detail": ""
+   },
+   "flags": [
+    "營收轉正"
+   ],
+   "signals": {
+    "base": {
+     "score": 0.6444687788704477,
+     "detail": "約 28 週箱型整理，區間 11.40–13.72（振幅 20%），現價位於箱內 0%；整理前高點比箱頂高 34%，屬跌深後打底",
+     "metrics": {
+      "days": 140.0,
+      "range": 0.2034,
+      "box_high": 13.7184,
+      "box_low": 11.4,
+      "pos": 0.0,
+      "prior_drop": 0.345
+     }
+    },
+    "volume_dry": {
+     "score": 0.0,
+     "detail": "20日均量為年均量的 284%",
+     "metrics": {
+      "ratio": 2.8439,
+      "choke": false,
+      "avg20_lots": 1254.3451
+     }
+    },
+    "ma_squeeze": {
+     "score": 0.0,
+     "detail": "5/10/20/60日均線差距 5.2%，近20日有 14 日差距 ≤ 4%；未成多頭排列；60日線下彎",
+     "metrics": {
+      "spread": 0.0519,
+      "full_bull": false,
+      "days_tight": 14.0,
+      "ma_long_slope": -0.0084
+     }
+    },
+    "margin": {
+     "score": 0.17060535506402794,
+     "detail": "融資餘額 2,006 張，60日 +21%",
+     "metrics": {
+      "balance": 2006.0,
+      "chg60": 0.2106,
+      "near_low": false
+     }
+    },
+    "smart_money": {
+     "score": 0.017142857142857144,
+     "detail": "法人近20日淨買 -7,564 張（占量 -30.2%，15% 天買超）；60日資金流 CMF -0.23",
+     "metrics": {
+      "cmf": -0.2334,
+      "branch_ratio": null
+     }
+    },
+    "turnaround": {
+     "score": 0.85,
+     "detail": "過去兩年有 68% 月份營收年減；一年前的近12月營收較前一年 -3%",
+     "metrics": {
+      "neg_ratio": 0.6818,
+      "ttm_drop": -0.027,
+      "loss": false
+     }
+    },
+    "yoy_turn": {
+     "score": 1.0,
+     "detail": "2026/08 營收 YoY +1.3%（前5月平均 -0.1%），MoM +0.5%",
+     "metrics": {
+      "yoy": 0.0131,
+      "prev_avg": -0.0015,
+      "mom": 0.0046,
+      "turned": true
+     }
+    },
+    "valuation": {
+     "score": 0.9107000000000001,
+     "detail": "股價位於 3 年區間 0%；PBR 0.73（4 年百分位 0%）；PER 18.9",
+     "metrics": {
+      "price_pos": 0.0,
+      "pbr": 0.73,
+      "pbr_pct": 0.0025,
+      "per": 18.93
+     }
+    },
+    "theme": {
+     "score": 0.0,
+     "detail": "未列入題材清單",
+     "metrics": {}
+    },
+    "big_holder": {
+     "score": null,
+     "detail": "股權分散資料僅 1 週（需 ≥4 週）",
+     "metrics": {}
+    },
+    "insider": {
+     "score": null,
+     "detail": "董監持股快照不足 2 個月（每月累積）",
+     "metrics": {}
+    }
+   },
+   "links": {
+    "news": "https://news.google.com/search?q=%E5%91%B3%E5%85%A8%201201&hl=zh-TW",
+    "ptt": "https://www.ptt.cc/bbs/Stock/search?q=%E5%91%B3%E5%85%A8",
+    "dcard": "https://www.dcard.tw/search?query=%E5%91%B3%E5%85%A8&forum=stock",
+    "mobile01": "https://www.mobile01.com/googlesearch.php?q=%E5%91%B3%E5%85%A8",
+    "goodinfo": "https://goodinfo.tw/tw/StockDetail.asp?STOCK_ID=1201"
+   }
+  },
+  {
+   "code": "1440",
+   "name": "南紡",
+   "market": "twse",
+   "industry": "紡織纖維",
+   "score": 37.5,
+   "coverage": 0.77,
+   "close": 13.4,
+   "date": "2026-10-05",
+   "trigger": {
+    "fired": false,
+    "detail": ""
+   },
+   "flags": [
+    "營收轉正"
+   ],
+   "signals": {
+    "base": {
+     "score": 0.8097345178577702,
+     "detail": "約 50 週箱型整理，區間 11.05–15.25（振幅 38%），現價位於箱內 56%",
+     "metrics": {
+      "days": 250.0,
+      "range": 0.3805,
+      "box_high": 15.252,
+      "box_low": 11.048,
+      "pos": 0.5595,
+      "prior_drop": 0.2351
+     }
+    },
+    "volume_dry": {
+     "score": 0.0,
+     "detail": "20日均量為年均量的 117%",
+     "metrics": {
+      "ratio": 1.1748,
+      "choke": false,
+      "avg20_lots": 2757.2297
+     }
+    },
+    "ma_squeeze": {
+     "score": 0.5359735596990884,
+     "detail": "5/10/20/60日均線差距 1.2%，近20日有 15 日差距 ≤ 4%；偏多（中期>長期）；60日線下彎",
+     "metrics": {
+      "spread": 0.0119,
+      "full_bull": false,
+      "days_tight": 15.0,
+      "ma_long_slope": -0.0005
+     }
+    },
+    "margin": {
+     "score": 0.3051232073698044,
+     "detail": "融資餘額 5,119 張，60日 -5%",
+     "metrics": {
+      "balance": 5119.0,
+      "chg60": -0.0529,
+      "near_low": false
+     }
+    },
+    "smart_money": {
+     "score": 0.04571428571428573,
+     "detail": "法人近20日淨買 -76 張（占量 -0.1%，40% 天買超）；60日資金流 CMF -0.15",
+     "metrics": {
+      "cmf": -0.1452,
+      "branch_ratio": null
+     }
+    },
+    "turnaround": {
+     "score": 0.85,
+     "detail": "過去兩年有 95% 月份營收年減；一年前的近12月營收較前一年 -13%",
+     "metrics": {
+      "neg_ratio": 0.9545,
+      "ttm_drop": -0.1306,
+      "loss": false
+     }
+    },
+    "yoy_turn": {
+     "score": 0.025381455243159712,
+     "detail": "2026/08 營收 YoY -4.2%（前5月平均 -5.8%），MoM -19.2%",
+     "metrics": {
+      "yoy": -0.0423,
+      "prev_avg": -0.0575,
+      "mom": -0.1922,
+      "turned": true
+     }
+    },
+    "valuation": {
+     "score": 0.5700067705162095,
+     "detail": "股價位於 3 年區間 38%；PBR 0.77（4 年百分位 11%）；PER 443.3",
+     "metrics": {
+      "price_pos": 0.3791,
+      "pbr": 0.77,
+      "pbr_pct": 0.1119,
+      "per": 443.33
+     }
+    },
+    "theme": {
+     "score": 0.0,
+     "detail": "未列入題材清單",
+     "metrics": {}
+    },
+    "big_holder": {
+     "score": null,
+     "detail": "股權分散資料僅 1 週（需 ≥4 週）",
+     "metrics": {}
+    },
+    "insider": {
+     "score": null,
+     "detail": "董監持股快照不足 2 個月（每月累積）",
+     "metrics": {}
+    }
+   },
+   "links": {
+    "news": "https://news.google.com/search?q=%E5%8D%97%E7%B4%A1%201440&hl=zh-TW",
+    "ptt": "https://www.ptt.cc/bbs/Stock/search?q=%E5%8D%97%E7%B4%A1",
+    "dcard": "https://www.dcard.tw/search?query=%E5%8D%97%E7%B4%A1&forum=stock",
+    "mobile01": "https://www.mobile01.com/googlesearch.php?q=%E5%8D%97%E7%B4%A1",
+    "goodinfo": "https://goodinfo.tw/tw/StockDetail.asp?STOCK_ID=1440"
+   }
+  },
+  {
+   "code": "1437",
+   "name": "勤益控",
+   "market": "twse",
+   "industry": "其他",
+   "score": 37.5,
+   "coverage": 0.77,
+   "close": 31.25,
+   "date": "2026-10-05",
+   "trigger": {
+    "fired": false,
+    "detail": ""
+   },
+   "flags": [
+    "營收轉正"
+   ],
+   "signals": {
+    "base": {
+     "score": 0.8899120012014317,
+     "detail": "約 50 週箱型整理，區間 27.66–33.75（振幅 22%），現價位於箱內 59%",
+     "metrics": {
+      "days": 250.0,
+      "range": 0.2202,
+      "box_high": 33.7521,
+      "box_low": 27.6617,
+      "pos": 0.5892,
+      "prior_drop": 0.0556
+     }
+    },
+    "volume_dry": {
+     "score": 0.47014449493877664,
+     "detail": "20日均量為年均量的 85%；近60日出現一年最低量（窒息量）",
+     "metrics": {
+      "ratio": 0.8542,
+      "choke": true,
+      "avg20_lots": 111.2471
+     }
+    },
+    "ma_squeeze": {
+     "score": 0.30843680318196603,
+     "detail": "5/10/20/60日均線差距 2.8%，近20日有 11 日差距 ≤ 4%；未成多頭排列；60日線上揚",
+     "metrics": {
+      "spread": 0.0285,
+      "full_bull": false,
+      "days_tight": 11.0,
+      "ma_long_slope": 0.0115
+     }
+    },
+    "margin": {
+     "score": 0.03140311804008909,
+     "detail": "融資餘額 3,163 張，60日 +61%",
+     "metrics": {
+      "balance": 3163.0,
+      "chg60": 0.6113,
+      "near_low": false
+     }
+    },
+    "smart_money": {
+     "score": 0.4685714285714285,
+     "detail": "法人近20日淨買 -76 張（占量 -3.4%，35% 天買超）；60日資金流 CMF +0.26",
+     "metrics": {
+      "cmf": 0.2577,
+      "branch_ratio": null
+     }
+    },
+    "turnaround": {
+     "score": 0.3477272727272727,
+     "detail": "過去兩年有 36% 月份營收年減；一年前的近12月營收較前一年 +9%",
+     "metrics": {
+      "neg_ratio": 0.3636,
+      "ttm_drop": 0.0917,
+      "loss": false
+     }
+    },
+    "yoy_turn": {
+     "score": 0.0,
+     "detail": "2026/09 營收 YoY -2.2%（前5月平均 +7.2%），MoM -12.9%",
+     "metrics": {
+      "yoy": -0.0218,
+      "prev_avg": 0.0724,
+      "mom": -0.1292,
+      "turned": true
+     }
+    },
+    "valuation": {
+     "score": 0.5971793406656682,
+     "detail": "股價位於 3 年區間 55%；PBR 0.74（4 年百分位 17%）；PER 7.3",
+     "metrics": {
+      "price_pos": 0.5525,
+      "pbr": 0.74,
+      "pbr_pct": 0.1728,
+      "per": 7.29
+     }
+    },
+    "theme": {
+     "score": 0.0,
+     "detail": "未列入題材清單",
+     "metrics": {}
+    },
+    "big_holder": {
+     "score": null,
+     "detail": "股權分散資料僅 1 週（需 ≥4 週）",
+     "metrics": {}
+    },
+    "insider": {
+     "score": null,
+     "detail": "董監持股快照不足 2 個月（每月累積）",
+     "metrics": {}
+    }
+   },
+   "links": {
+    "news": "https://news.google.com/search?q=%E5%8B%A4%E7%9B%8A%E6%8E%A7%201437&hl=zh-TW",
+    "ptt": "https://www.ptt.cc/bbs/Stock/search?q=%E5%8B%A4%E7%9B%8A%E6%8E%A7",
+    "dcard": "https://www.dcard.tw/search?query=%E5%8B%A4%E7%9B%8A%E6%8E%A7&forum=stock",
+    "mobile01": "https://www.mobile01.com/googlesearch.php?q=%E5%8B%A4%E7%9B%8A%E6%8E%A7",
+    "goodinfo": "https://goodinfo.tw/tw/StockDetail.asp?STOCK_ID=1437"
+   }
+  },
+  {
+   "code": "1342",
+   "name": "八貫",
+   "market": "twse",
+   "industry": "其他",
+   "score": 33.7,
+   "coverage": 0.77,
+   "close": 99.8,
+   "date": "2026-10-05",
+   "trigger": {
+    "fired": false,
+    "detail": ""
+   },
+   "flags": [],
+   "signals": {
+    "base": {
+     "score": 0.5339002037100311,
+     "detail": "約 24 週箱型整理，區間 88.20–117.50（振幅 33%），現價位於箱內 40%",
+     "metrics": {
+      "days": 120.0,
+      "range": 0.3322,
+      "box_high": 117.5,
+      "box_low": 88.2,
+      "pos": 0.3959,
+      "prior_drop": -0.0206
+     }
+    },
+    "volume_dry": {
+     "score": 1.0,
+     "detail": "20日均量為年均量的 28%；近60日出現一年最低量（窒息量）",
+     "metrics": {
+      "ratio": 0.2805,
+      "choke": true,
+      "avg20_lots": 109.1257
+     }
+    },
+    "ma_squeeze": {
+     "score": 0.005327397529513505,
+     "detail": "5/10/20/60日均線差距 4.0%，近20日有 3 日差距 ≤ 4%；未成多頭排列；60日線下彎",
+     "metrics": {
+      "spread": 0.0396,
+      "full_bull": false,
+      "days_tight": 3.0,
+      "ma_long_slope": -0.0186
+     }
+    },
+    "margin": {
+     "score": 0.5223714063714063,
+     "detail": "融資餘額 532 張，60日 -15%",
+     "metrics": {
+      "balance": 532.0,
+      "chg60": -0.1515,
+      "near_low": false
+     }
+    },
+    "smart_money": {
+     "score": 0.04,
+     "detail": "法人近20日淨買 -295 張（占量 -13.5%，35% 天買超）；60日資金流 CMF -0.04",
+     "metrics": {
+      "cmf": -0.0377,
+      "branch_ratio": null
+     }
+    },
+    "turnaround": {
+     "score": 0.0,
+     "detail": "過去兩年有 18% 月份營收年減；一年前的近12月營收較前一年 +8%",
+     "metrics": {
+      "neg_ratio": 0.1818,
+      "ttm_drop": 0.0825,
+      "loss": false
+     }
+    },
+    "yoy_turn": {
+     "score": 0.4,
+     "detail": "2026/08 營收 YoY +62.8%（前5月平均 +46.1%），MoM -9.0%",
+     "metrics": {
+      "yoy": 0.6283,
+      "prev_avg": 0.4611,
+      "mom": -0.0902,
+      "turned": false
+     }
+    },
+    "valuation": {
+     "score": 0.19270699588477364,
+     "detail": "股價位於 3 年區間 61%；PBR 3.47（4 年百分位 54%）；PER 14.1",
+     "metrics": {
+      "price_pos": 0.6053,
+      "pbr": 3.47,
+      "pbr_pct": 0.5391,
+      "per": 14.14
+     }
+    },
+    "theme": {
+     "score": 0.0,
+     "detail": "未列入題材清單",
+     "metrics": {}
+    },
+    "big_holder": {
+     "score": null,
+     "detail": "股權分散資料僅 1 週（需 ≥4 週）",
+     "metrics": {}
+    },
+    "insider": {
+     "score": null,
+     "detail": "董監持股快照不足 2 個月（每月累積）",
+     "metrics": {}
+    }
+   },
+   "links": {
+    "news": "https://news.google.com/search?q=%E5%85%AB%E8%B2%AB%201342&hl=zh-TW",
+    "ptt": "https://www.ptt.cc/bbs/Stock/search?q=%E5%85%AB%E8%B2%AB",
+    "dcard": "https://www.dcard.tw/search?query=%E5%85%AB%E8%B2%AB&forum=stock",
+    "mobile01": "https://www.mobile01.com/googlesearch.php?q=%E5%85%AB%E8%B2%AB",
+    "goodinfo": "https://goodinfo.tw/tw/StockDetail.asp?STOCK_ID=1342"
+   }
+  },
+  {
+   "code": "1229",
+   "name": "聯華",
+   "market": "twse",
+   "industry": "食品工業",
+   "score": 32.7,
+   "coverage": 0.77,
+   "close": 39.65,
+   "date": "2026-10-05",
+   "trigger": {
+    "fired": false,
+    "detail": ""
+   },
+   "flags": [
+    "營收轉正"
+   ],
+   "signals": {
+    "base": {
+     "score": 0.8043683409595933,
+     "detail": "約 46 週箱型整理，區間 35.93–46.68（振幅 30%），現價位於箱內 35%",
+     "metrics": {
+      "days": 230.0,
+      "range": 0.299,
+      "box_high": 46.6753,
+      "box_low": 35.933,
+      "pos": 0.346,
+      "prior_drop": 0.209
+     }
+    },
+    "volume_dry": {
+     "score": 0.20230247674888238,
+     "detail": "20日均量為年均量的 83%",
+     "metrics": {
+      "ratio": 0.8266,
+      "choke": false,
+      "avg20_lots": 1948.7464
+     }
+    },
+    "ma_squeeze": {
+     "score": 0.17287219594105954,
+     "detail": "5/10/20/60日均線差距 2.7%，近20日有 20 日差距 ≤ 4%；未成多頭排列；60日線下彎",
+     "metrics": {
+      "spread": 0.0274,
+      "full_bull": false,
+      "days_tight": 20.0,
+      "ma_long_slope": -0.0011
+     }
+    },
+    "margin": {
+     "score": 0.20268028175063346,
+     "detail": "融資餘額 2,974 張，60日 -0%",
+     "metrics": {
+      "balance": 2974.0,
+      "chg60": -0.0037,
+      "near_low": false
+     }
+    },
+    "smart_money": {
+     "score": 0.06285714285714288,
+     "detail": "法人近20日淨買 -1,441 張（占量 -3.7%，55% 天買超）；60日資金流 CMF -0.03",
+     "metrics": {
+      "cmf": -0.0308,
+      "branch_ratio": null
+     }
+    },
+    "turnaround": {
+     "score": 0.6375,
+     "detail": "過去兩年有 50% 月份營收年減；一年前的近12月營收較前一年 -9%",
+     "metrics": {
+      "neg_ratio": 0.5,
+      "ttm_drop": -0.0943,
+      "loss": false
+     }
+    },
+    "yoy_turn": {
+     "score": 0.0,
+     "detail": "2026/08 營收 YoY -13.1%（前5月平均 +6.0%），MoM -58.0%",
+     "metrics": {
+      "yoy": -0.1313,
+      "prev_avg": 0.06,
+      "mom": -0.58,
+      "turned": true
+     }
+    },
+    "valuation": {
+     "score": 0.8403131807566002,
+     "detail": "股價位於 3 年區間 18%；PBR 1.14（4 年百分位 1%）；PER 16.1",
+     "metrics": {
+      "price_pos": 0.1814,
+      "pbr": 1.14,
+      "pbr_pct": 0.0066,
+      "per": 16.06
+     }
+    },
+    "theme": {
+     "score": 0.0,
+     "detail": "未列入題材清單",
+     "metrics": {}
+    },
+    "big_holder": {
+     "score": null,
+     "detail": "股權分散資料僅 1 週（需 ≥4 週）",
+     "metrics": {}
+    },
+    "insider": {
+     "score": null,
+     "detail": "董監持股快照不足 2 個月（每月累積）",
+     "metrics": {}
+    }
+   },
+   "links": {
+    "news": "https://news.google.com/search?q=%E8%81%AF%E8%8F%AF%201229&hl=zh-TW",
+    "ptt": "https://www.ptt.cc/bbs/Stock/search?q=%E8%81%AF%E8%8F%AF",
+    "dcard": "https://www.dcard.tw/search?query=%E8%81%AF%E8%8F%AF&forum=stock",
+    "mobile01": "https://www.mobile01.com/googlesearch.php?q=%E8%81%AF%E8%8F%AF",
+    "goodinfo": "https://goodinfo.tw/tw/StockDetail.asp?STOCK_ID=1229"
+   }
+  }
+ ]
+}
