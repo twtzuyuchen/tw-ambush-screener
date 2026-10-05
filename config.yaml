@@ -1,0 +1,88 @@
+# ==========================================================
+# 埋伏股選股器 設定檔 —— 所有門檻都可以在這裡調
+# ==========================================================
+paths:
+  data: data          # 累積的官方快照（集保、董監持股）
+  docs: docs          # GitHub Pages 輸出
+
+universe:
+  min_price: 10       # 排除低價股
+  min_avg_lots: 30    # 20 日均量下限（張）：窒息量 ≠ 沒有流動性
+  limit: 0            # >0 只跑前 N 檔（除錯用）
+
+prices:
+  period: 3y          # yfinance 下載長度（低基期判斷用 3 年）
+  chunk: 150
+
+technical:
+  base:               # 長期橫盤打底
+    min_days: 120     # 至少約半年
+    max_days: 250     # 最長約一年
+    max_range: 0.40   # 區間最高 / 最低 - 1 不得超過
+    max_trend_r2: 0.5 # 線性趨勢 R² 上限：排除緩漲緩跌（不是打底）
+  volume:             # 窒息量
+    long_days: 250
+    dry_ratio_full: 0.40   # 20日均量 / 年均量 ≤ 0.40 → 滿分
+    dry_ratio_zero: 1.00
+    choke_quantile: 0.10   # 近60日最低5日均量落在一年最低10%
+  ma:                 # 均線糾結
+    periods: [5, 10, 20, 60]
+    max_spread: 0.04  # (最高均線-最低均線)/收盤 ≤ 4%
+  trigger:            # 帶量紅K突破（點火訊號，只標記不計分）
+    lookback: 60
+    vol_mult: 2.0
+    min_gain: 0.03
+
+stage1:               # 第一階段：全市場技術面粗篩
+  max_spread: 0.07
+  require_base: true
+
+stage2:               # 第二階段：FinMind 逐檔抓籌碼/營收/估值
+  max_with_token: 100
+  max_without_token: 40
+
+finmind:
+  min_interval_with_token: 6.2     # 秒；約 580 次/小時
+  min_interval_without_token: 12.5
+  use_holding_shares: true         # 股權分散表；失敗時改用 data/tdcc 累積快照
+  use_branch_report: false         # 券商分點：需 FinMind 贊助方案
+  branch_top_n: 15
+  branch_days: 10
+
+chips:
+  big_holder:  {weeks: 8, min_weeks: 4, target_increase_pp: 1.0, target_holder_drop: 0.05}
+  margin:      {lookback: 120, near_low_tol: 0.03, target_drop_60d: 0.30, min_max_balance: 200}
+  smart_money: {days: 20, target_net_ratio: 0.05, cmf_days: 60, target_cmf: 0.15, branch_top: 5, target_branch_ratio: 0.10}
+  insider:     {target_increase: 0.01}
+
+fundamental:
+  min_months: 26
+
+valuation:
+  price_position_years: 3
+
+sentiment:            # 只對前 top_n 名查，避免大量請求
+  top_n: 30
+  days: 90
+  news_quiet: 3
+  news_loud: 25
+  ptt_quiet: 1
+  ptt_loud: 8
+
+weights:              # 總和不必是 100，會自動正規化
+  base: 12
+  volume_dry: 10
+  ma_squeeze: 12
+  big_holder: 12
+  margin: 8
+  smart_money: 8
+  insider: 6
+  turnaround: 8
+  yoy_turn: 10
+  theme: 4
+  media: 5
+  valuation: 5
+
+output:
+  top_n: 60
+  min_coverage: 0.5   # 可用訊號權重低於此比例者不列入排名
