@@ -38,6 +38,7 @@ stage1:               # 第一階段：全市場技術面粗篩
   require_base: true
 
 stage2:               # 第二階段：FinMind 逐檔抓籌碼/營收/估值
+  max_per_industry: 15  # 深入分析名單每產業上限（比輸出多留幾檔備位）
   max_with_token: 100
   max_without_token: 40
 
@@ -61,8 +62,9 @@ fundamental:
 valuation:
   price_position_years: 3
 
-sentiment:            # 只對前 top_n 名查，避免大量請求
-  top_n: 30
+sentiment:            # 只查可能上榜的股票
+  buffer_per_industry: 3   # 每產業多查幾檔備位
+  max_lookups: 120
   days: 90
   news_quiet: 3
   news_loud: 25
@@ -84,5 +86,6 @@ weights:              # 總和不必是 100，會自動正規化
   valuation: 5
 
 output:
-  top_n: 60
-  min_coverage: 0.5   # 可用訊號權重低於此比例者不列入排名
+  max_per_industry: 10    # 同一產業最多列幾檔
+  top_n: 0                # 總檔數上限；0 = 不限
+  min_coverage: 0.5       # 可用訊號權重低於此比例者不列入
