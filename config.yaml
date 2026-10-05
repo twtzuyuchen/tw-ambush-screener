@@ -44,7 +44,7 @@ stage2:               # 第二階段：FinMind 逐檔抓籌碼/營收/估值
 finmind:
   min_interval_with_token: 6.2     # 秒；約 580 次/小時
   min_interval_without_token: 12.5
-  use_holding_shares: true         # 股權分散表；失敗時改用 data/tdcc 累積快照
+  use_holding_shares: false        # 股權分散表需 FinMind 贊助方案；關閉時用 data/tdcc 每週累積快照
   use_branch_report: false         # 券商分點：需 FinMind 贊助方案
   branch_top_n: 15
   branch_days: 10
