@@ -82,6 +82,7 @@ def offline(monkeypatch, tmp_path):
         if str(p).endswith("config.yaml"):
             c["paths"] = {"data": str(tmp_path / "data"), "docs": str(tmp_path / "docs")}
             c["universe"]["min_avg_lots"] = 0
+            c["finmind"]["use_holding_shares"] = True
         return c
     monkeypatch.setattr(main, "load_yaml", cfg_patch)
     monkeypatch.setattr(main, "ROOT", main.ROOT)
