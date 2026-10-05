@@ -40,6 +40,27 @@ def combine(sigs: dict, weights: dict):
     return (100 * num / den if den else 0.0), (den / total if total else 0.0)
 
 
+GENERIC_INDUSTRY = {"電子工業", "創新板股票", "創新版股票", "其他", ""}
+
+
+def primary_industry(ind: str) -> str:
+    """FinMind 可能給多個產業別（如「半導體業、電子工業」），取最具體的一個。"""
+    parts = [p for p in str(ind or "").split("、") if p]
+    specific = [p for p in parts if p not in GENERIC_INDUSTRY]
+    return (specific or parts or ["其他"])[0]
+
+
+def cap_by_industry(rows, n, key):
+    """依 key 由高到低排序，每個產業最多保留 n 檔。"""
+    count, out = {}, []
+    for r in sorted(rows, key=key, reverse=True):
+        g = r["group"]
+        if count.get(g, 0) < n:
+            count[g] = count.get(g, 0) + 1
+            out.append(r)
+    return out
+
+
 # ---------------------------------------------------------------- 階段一
 def stage1(universe, px_map, cfg):
     tc, uc = cfg["technical"], cfg["universe"]
@@ -63,7 +84,8 @@ def stage1(universe, px_map, cfg):
         w = {k: cfg["weights"][k] for k in sig}
         tech, _ = combine(sig, w)
         rows.append({"code": r.code, "name": r.name, "market": r.market,
-                     "industry": r.industry, "signals": sig, "tech": tech,
+                     "industry": r.industry, "group": primary_industry(r.industry),
+                     "signals": sig, "tech": tech,
                      "trigger": S.sig_trigger(px, tc["trigger"])})
     rows.sort(key=lambda x: -x["tech"])
     return rows
@@ -173,7 +195,9 @@ def run(limit=0):
     s1 = stage1(uni, px_map, cfg)
     log.info("階段一入圍 %d 檔", len(s1))
     cap = cfg["stage2"]["max_with_token" if token else "max_without_token"]
-    finalists = s1[:cap]
+    # 深入分析名單也套產業上限，避免 FinMind 額度被同一產業吃光
+    finalists = cap_by_industry(s1, cfg["stage2"]["max_per_industry"],
+                                key=lambda r: r["tech"])[:cap]
 
     done = []
     for i, row in enumerate(finalists, 1):
@@ -189,19 +213,21 @@ def run(limit=0):
         if i % 10 == 0:
             log.info("深入分析 %d/%d（FinMind 呼叫 %d 次）", i, len(finalists), fm.calls)
 
+    oc, sc = cfg["output"], cfg["sentiment"]
+    n_ind = oc["max_per_industry"]
     for row in done:
         row["score"], row["coverage"] = combine(row["signals"], cfg["weights"])
-    done.sort(key=lambda r: -r["score"])
+    ok = [r for r in done if r["coverage"] >= oc["min_coverage"]]
 
-    # 媒體聲量：只查前段班
-    sc = cfg["sentiment"]
-    for row in done[:sc["top_n"]]:
+    # 媒體聲量：只查可能上榜的股票（每產業多留幾檔備位，因聲量會影響排序）
+    cand = cap_by_industry(ok, n_ind + sc["buffer_per_industry"], key=lambda r: r["score"])
+    for row in cand[:sc["max_lookups"]]:
         n, p = sentiment.lookup(row["name"], row["code"], sc["days"])
         row["signals"]["media"] = S.sig_media(n, p, sc)
     # 分點（選用）
     if fc["use_branch_report"]:
         try:
-            for row in done[:fc["branch_top_n"]]:
+            for row in sorted(ok, key=lambda r: -r["score"])[:fc["branch_top_n"]]:
                 ratio, txt = branch_signal(fm, row["code"], px_map[row["code"]], cfg)
                 if ratio is not None:
                     row["signals"]["smart_money"] = S.sig_smart_money(
@@ -210,38 +236,41 @@ def run(limit=0):
         except QuotaExceeded as e:
             warnings.append(f"分點資料額度用盡：{e}")
 
-    items = []
-    for row in done:
+    for row in ok:
         row["score"], row["coverage"] = combine(row["signals"], cfg["weights"])
-        if row["coverage"] < cfg["output"]["min_coverage"]:
-            continue
+    final = cap_by_industry(ok, n_ind, key=lambda r: r["score"])
+    if oc["top_n"]:
+        final = final[:oc["top_n"]]
+
+    items = []
+    for row in final:
         sg = row["signals"]
         flags = []
         if row["trigger"]["fired"]:
             flags.append("已點火")
         if (sg["theme"]["score"] or 0) >= 0.4 and (sg.get("media", {}).get("score") or 0) >= 0.7:
             flags.append("題材未被發現")
-        if (sg["yoy_turn"]["metrics"].get("turned")):
+        if sg["yoy_turn"]["metrics"].get("turned"):
             flags.append("營收轉正")
         px = px_map[row["code"]]
         items.append({
             "code": row["code"], "name": row["name"], "market": row["market"],
-            "industry": row["industry"], "score": round(row["score"], 1),
-            "coverage": round(row["coverage"], 2), "close": round(float(px["close"].iloc[-1]), 2),
+            "industry": row["industry"], "group": row["group"],
+            "score": round(row["score"], 1), "coverage": round(row["coverage"], 2),
+            "close": round(float(px["close"].iloc[-1]), 2),
             "date": px.index[-1].strftime("%Y-%m-%d"), "trigger": row["trigger"],
             "flags": flags, "signals": sg, "links": sentiment.links(row["name"], row["code"]),
         })
-    items.sort(key=lambda x: -x["score"])
-    items = items[:cfg["output"]["top_n"]]
 
     n_weeks = tdcc_hist["date"].nunique() if not tdcc_hist.empty else 0
     if n_weeks < cfg["chips"]["big_holder"]["min_weeks"]:
         warnings.append(f"自行累積的集保快照僅 {n_weeks} 週（FinMind 股權分散表不可用時才會用到）")
     meta = {"generated_at": pd.Timestamp.now(tz="Asia/Taipei").strftime("%Y-%m-%d %H:%M"),
             "universe": len(uni), "stage1": len(s1), "stage2": len(done),
-            "finmind_calls": fm.calls, "weights": cfg["weights"], "warnings": warnings}
+            "finmind_calls": fm.calls, "weights": cfg["weights"],
+            "max_per_industry": n_ind, "warnings": warnings}
     report.write(items, meta, docs_dir)
-    log.info("完成：上榜 %d 檔", len(items))
+    log.info("完成：上榜 %d 檔，涵蓋 %d 個產業", len(items), len({i["group"] for i in items}))
     return items, meta
 
 
