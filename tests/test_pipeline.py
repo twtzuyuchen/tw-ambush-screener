@@ -100,13 +100,12 @@ def test_technical_signals():
 
 def test_pipeline(offline):
     items, meta = main.run()
-    codes = [i["code"] for i in items]
-    assert codes and codes[0] == "1111", codes
+    assert items and items[0]["code"] == "1111", [i["code"] for i in items]
     top = items[0]
     for k in ("big_holder", "margin", "smart_money", "yoy_turn", "turnaround", "valuation"):
         assert top["signals"][k]["score"] is not None, k
     out = json.loads((offline / "docs" / "results.json").read_text(encoding="utf-8"))
-    assert out["items"][0]["code"] == "1111"
+    assert out["items"][0]["code"] == "1111" and out["items"][0]["group"] == "半導體業"
     print(json.dumps(top["signals"], ensure_ascii=False, indent=1)[:2500])
 
 
@@ -126,3 +125,14 @@ def test_yfinance_split():
     data[("2222.TWO", "Close")] = np.nan
     out = _split(data, ["1111.TW", "2222.TWO"])
     assert list(out) == ["1111.TW"] and list(out["1111.TW"].columns)[3] == "close"
+
+
+def test_industry_cap():
+    assert main.primary_industry("電子工業、半導體業") == "半導體業"
+    assert main.primary_industry("") == "其他"
+    rows = [{"code": str(1000 + i), "group": "半導體業" if i < 15 else "航運業", "score": 100 - i}
+            for i in range(20)]
+    out = main.cap_by_industry(rows, 10, key=lambda r: r["score"])
+    assert sum(r["group"] == "半導體業" for r in out) == 10
+    assert sum(r["group"] == "航運業" for r in out) == 5
+    assert [r["score"] for r in out] == sorted([r["score"] for r in out], reverse=True)
