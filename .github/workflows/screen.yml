@@ -2,7 +2,7 @@ name: screen
 
 on:
   schedule:
-    - cron: "40 10 * * 1-5"   # 台灣時間週一至週五 18:40（收盤資料更新後）
+    - cron: "0 2 * * 6"   # 每週六台灣時間 10:00（集保週資料已於週五晚間更新）
   workflow_dispatch:
     inputs:
       limit:
