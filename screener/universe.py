@@ -41,9 +41,15 @@ def _from_openapi() -> pd.DataFrame:
 
 
 def load_universe(fm) -> pd.DataFrame:
+    """FinMind 清單含產業別但也含已下市股票，用官方當日交易清單過濾。"""
     df = _from_finmind(fm)
+    live = _from_openapi()
     if df.empty:
         log.warning("FinMind 股票清單取得失敗，改用證交所/櫃買 OpenAPI")
-        df = _from_openapi()
+        df = live
+    elif not live.empty:
+        before = len(df)
+        df = df[df["code"].isin(set(live["code"]))]
+        log.info("排除已下市或停止交易：%d 檔", before - len(df))
     log.info("股票池：%d 檔", len(df))
     return df.sort_values("code").reset_index(drop=True)

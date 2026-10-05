@@ -8,7 +8,21 @@ from pathlib import Path
 
 import pandas as pd
 
+import time
+
 from .net import find_col, get_json, get_text, is_common_stock, log, to_num
+
+
+def _retry(fn, *args, tries=4, **kw):
+    """官方 OpenAPI 大檔偶爾傳到一半斷線（Response ended prematurely），重試即可。"""
+    for i in range(tries):
+        try:
+            return fn(*args, **kw)
+        except Exception as e:
+            if i == tries - 1:
+                raise
+            log.warning("下載失敗（第 %d 次），%d 秒後重試：%s", i + 1, 15 * (i + 1), e)
+            time.sleep(15 * (i + 1))
 
 TDCC_URL = "https://opendata.tdcc.com.tw/getOD.ashx?id=1-5"
 INSIDER_URLS = {
@@ -19,7 +33,7 @@ INSIDER_URLS = {
 
 # ---------------- 集保股權分散 ----------------
 def update_tdcc(data_dir: Path):
-    text = get_text(TDCC_URL, encoding="utf-8")
+    text = _retry(get_text, TDCC_URL, encoding="utf-8", timeout=120)
     df = pd.read_csv(io.StringIO(text.lstrip("\ufeff")), dtype=str)
     c_date = find_col(df, "日期")
     c_code = find_col(df, "代號")
@@ -70,7 +84,7 @@ def update_insider(data_dir: Path):
     frames = []
     for market, url in INSIDER_URLS.items():
         try:
-            df = pd.DataFrame(get_json(url))
+            df = pd.DataFrame(_retry(get_json, url, timeout=180))
             c_code = find_col(df, "公司代號", "SecuritiesCompanyCode", "Code")
             c_hold = find_col(df, "目前持股", "CurrentShareholding")
             c_ym = find_col(df, "資料年月", "YearMonth")

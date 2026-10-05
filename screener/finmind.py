@@ -49,6 +49,11 @@ class FinMind:
         status = j.get("status", r.status_code)
         if status == 402:
             raise QuotaExceeded(j.get("msg", "FinMind 額度用盡"))
+        msg = str(j.get("msg", ""))
+        if status != 200 and "level" in msg.lower():
+            log.warning("FinMind %s 需要更高會員等級，本次執行停用（請在 config.yaml 關閉）", dataset)
+            self.disabled.add(dataset)
+            return pd.DataFrame()
         if status != 200:
             n = self.fail_count[dataset] = self.fail_count.get(dataset, 0) + 1
             log.warning("FinMind %s %s → %s %s", dataset, data_id, status, j.get("msg"))
